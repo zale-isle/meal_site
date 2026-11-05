@@ -1,0 +1,2686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Meal Planner</title>
+  <meta name="theme-color" content="#1e293b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Meal Planner">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj4KICA8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQwIiBmaWxsPSIjMWUyOTNiIi8+CiAgPHJlY3QgeD0iMjQiIHk9IjM2IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjEzMiIgcng9IjIwIiBmaWxsPSIjZTZlM2VlIi8+CiAgPHBhdGggZD0iTTI0IDU2IEMyNCA0NC45NTQgMzIuOTU0IDM2IDQ0IDM2IEwxNDggMzYgQzE1OS4wNDYgMzYgMTY4IDQ0Ljk1NCAxNjggNTYgTDE2OCA3MiBMMjQgNzIgWiIgZmlsbD0iIzExNWU1OSIvPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iMzYiIHI9IjEwIiBmaWxsPSIjNjUyNTM4Ii8+CiAgPGNpcmNsZSBjeD0iMTMyIiBjeT0iMzYiIHI9IjEwIiBmaWxsPSIjNjUyNTM4Ii8+CiAgPHJlY3QgeD0iNDQiIHk9IjkwIiB3aWR0aD0iNDQiIGhlaWdodD0iMjQiIHJ4PSI2IiBmaWxsPSIjMGY3NjZlIi8+CiAgPHJlY3QgeD0iMTAwIiB5PSI5MCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjI0IiByeD0iNiIgZmlsbD0iIzZiMjFhOCIvPgogIDxyZWN0IHg9IjQ0IiB5PSIxMjQiIHdpZHRoPSI0NCIgaGVpZ2h0PSIyNCIgcng9IjYiIGZpbGw9IiMwNTk2NjkiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEyNCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjI0IiByeD0iNiIgZmlsbD0iI2Q5NzcwNiIvPgo8L3N2Zz4=">
+  <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj4KICA8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQwIiBmaWxsPSIjMWUyOTNiIi8+CiAgPHJlY3QgeD0iMjQiIHk9IjM2IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjEzMiIgcng9IjIwIiBmaWxsPSIjZTZlM2VlIi8+CiAgPHBhdGggZD0iTTI0IDU2IEMyNCA0NC45NTQgMzIuOTU0IDM2IDQ0IDM2IEwxNDggMzYgQzE1OS4wNDYgMzYgMTY4IDQ0Ljk1NCAxNjggNTYgTDE2OCA3MiBMMjQgNzIgWiIgZmlsbD0iIzExNWU1OSIvPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iMzYiIHI9IjEwIiBmaWxsPSIjNjUyNTM4Ii8+CiAgPGNpcmNsZSBjeD0iMTMyIiBjeT0iMzYiIHI9IjEwIiBmaWxsPSIjNjUyNTM4Ii8+CiAgPHJlY3QgeD0iNDQiIHk9IjkwIiB3aWR0aD0iNDQiIGhlaWdodD0iMjQiIHJ4PSI2IiBmaWxsPSIjMGY3NjZlIi8+CiAgPHJlY3QgeD0iMTAwIiB5PSI5MCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjI0IiByeD0iNiIgZmlsbD0iIzZiMjFhOCIvPgogIDxyZWN0IHg9IjQ0IiB5PSIxMjQiIHdpZHRoPSI0NCIgaGVpZ2h0PSIyNCIgcng9IjYiIGZpbGw9IiMwNTk2NjkiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEyNCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjI0IiByeD0iNiIgZmlsbD0iI2Q5NzcwNiIvPgo8L3N2Zz4=">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    
+    /* Offline-First Core Layout & Utility Fallback (works even with zero internet / no CDN) */
+    *, ::before, ::after { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #b8b3c8;
+      color: #23202c;
+      margin: 0;
+    }
+    .hidden { display: none !important; }
+    .block { display: block; }
+    .inline-block { display: inline-block; }
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .grid { display: grid; }
+    .flex-col { flex-direction: column; }
+    .flex-wrap { flex-wrap: wrap; }
+    .flex-1 { flex: 1 1 0%; }
+    .shrink-0 { flex-shrink: 0; }
+    .items-center { align-items: center; }
+    .justify-between { justify-content: space-between; }
+    .gap-1 { gap: 0.25rem; }
+    .gap-1\.5 { gap: 0.375rem; }
+    .gap-2 { gap: 0.5rem; }
+    .gap-2\.5 { gap: 0.625rem; }
+    .gap-3 { gap: 0.75rem; }
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .w-full { width: 100%; }
+    .max-w-6xl { max-width: 72rem; }
+    .max-w-md { max-width: 28rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .p-1 { padding: 0.25rem; }
+    .p-1\.5 { padding: 0.375rem; }
+    .p-2 { padding: 0.5rem; }
+    .p-2\.5 { padding: 0.625rem; }
+    .p-3 { padding: 0.75rem; }
+    .p-3\.5 { padding: 0.875rem; }
+    .p-4 { padding: 1rem; }
+    .p-5 { padding: 1.25rem; }
+    .px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+    .px-2\.5 { padding-left: 0.625rem; padding-right: 0.625rem; }
+    .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+    .px-3\.5 { padding-left: 0.875rem; padding-right: 0.875rem; }
+    .py-0\.5 { padding-top: 0.125rem; padding-bottom: 0.125rem; }
+    .py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+    .py-1\.5 { padding-top: 0.375rem; padding-bottom: 0.375rem; }
+    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .mb-1 { margin-bottom: 0.25rem; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-2\.5 { margin-bottom: 0.625rem; }
+    .mb-3 { margin-bottom: 0.75rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-5 { margin-bottom: 1.25rem; }
+    .mt-2 { margin-top: 0.5rem; }
+    .mt-2\.5 { margin-top: 0.625rem; }
+    .mt-3 { margin-top: 0.75rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-8 { margin-top: 2rem; }
+    .mt-10 { margin-top: 2.5rem; }
+    .pb-32 { padding-bottom: 8rem; }
+    .h-24 { height: 6rem; }
+    .rounded-md { border-radius: 0.375rem; }
+    .rounded-lg { border-radius: 0.5rem; }
+    .rounded-xl { border-radius: 0.75rem; }
+    .rounded-2xl { border-radius: 1rem; }
+    .rounded-full { border-radius: 9999px; }
+    .border { border-width: 1px; border-style: solid; }
+    .border-b { border-bottom-width: 1px; border-bottom-style: solid; }
+    .border-t { border-top-width: 1px; border-top-style: solid; }
+    .font-bold { font-weight: 700; }
+    .font-semibold { font-weight: 600; }
+    .font-medium { font-weight: 500; }
+    .text-xs { font-size: 0.75rem; line-height: 1rem; }
+    .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+    .text-base { font-size: 1rem; line-height: 1.5rem; }
+    .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+    .text-white { color: #ffffff; }
+    .bg-slate-800 { background-color: #1e293b; }
+    .bg-teal-800 { background-color: #115e59; }
+    .bg-indigo-900 { background-color: #312e81; }
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (min-width: 768px) {
+      .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 1280px) {
+      .xl\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+
+    /* Custom Muted Purple-Gray & Burgundy palette classes */
+    .bg-app-surface {
+      background-color: #dcd8e6; /* Soft lavender-gray panel */
+    }
+    .bg-app-card {
+      background-color: #e6e3ee; /* Soft muted card surface */
+    }
+    .bg-app-subcard {
+      background-color: #d2cde0; /* Slightly deeper muted panel */
+    }
+    .bg-app-input {
+      background-color: #f3f1f7; /* Soft off-white input box */
+    }
+    .border-app-muted {
+      border-color: #a39cb8;
+    }
+    .border-app-subtle {
+      border-color: #c5bfd4;
+    }
+    .bg-burgundy-deep {
+      background-color: #652538;
+    }
+    .bg-burgundy-deep:hover {
+      background-color: #521c2c;
+    }
+    .bg-burgundy-soft {
+      background-color: #eadce2;
+    }
+    .bg-burgundy-badge {
+      background-color: #dcc2cc;
+    }
+    .text-burgundy-deep {
+      color: #581e30;
+    }
+    .text-burgundy-muted {
+      color: #7c354b;
+    }
+    .border-burgundy-soft {
+      border-color: #c4a1af;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen p-3 sm:p-6 md:p-8 pb-32 sm:pb-40">
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <header class="mb-5 border-b border-app-muted pb-4 no-print">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <div class="flex items-center justify-between sm:justify-start gap-3">
+            <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+              Weekly Meal Planner
+            </h1>
+            <span id="save-status" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-teal-900/15 text-teal-950 border border-teal-800/20 transition-opacity duration-300">
+              Saved
+            </span>
+          </div>
+          <p class="text-slate-800 text-xs sm:text-sm mt-1">Dinner plans with prep/leftover selectors, multi-week tabs, B/X alternates &amp; store-mapped groceries.</p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <button id="toggle-templates-btn" type="button" class="px-3.5 py-2 bg-indigo-900 hover:bg-indigo-950 text-white text-xs sm:text-sm font-semibold rounded-lg shadow-sm transition flex items-center gap-1.5">
+            <span>📂 Week Templates</span>
+            <span id="templates-count-badge" class="px-1.5 py-0.5 text-[11px] rounded-full bg-indigo-950 text-indigo-100 font-bold">2</span>
+          </button>
+          <button id="toggle-grocery-btn" type="button" class="px-3.5 py-2 bg-teal-800 hover:bg-teal-900 text-white text-xs sm:text-sm font-semibold rounded-lg shadow-sm transition flex items-center gap-1.5">
+            <span>🛒 Grocery &amp; Share</span>
+            <span id="grocery-count-badge" class="px-1.5 py-0.5 text-[11px] rounded-full bg-teal-950 text-teal-100 font-bold">0</span>
+          </button>
+          <button id="toggle-drawer-btn" type="button" class="px-3.5 py-2 bg-app-surface hover:bg-app-card text-slate-900 border border-app-muted text-xs sm:text-sm font-semibold rounded-lg shadow-sm transition flex items-center gap-1.5">
+            <span>Favorites &amp; Avoid List</span>
+            <span id="avoid-count-badge" class="px-1.5 py-0.5 text-[11px] rounded-full bg-burgundy-deep text-white font-bold">1</span>
+          </button>
+          <button id="fill-example-btn" type="button" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-900 text-white text-xs sm:text-sm font-medium rounded-lg shadow-sm transition">
+            Load Sample Week
+          </button>
+          <button id="toggle-notes-btn" type="button" class="px-3.5 py-2 bg-app-surface hover:bg-app-card text-slate-900 border border-app-muted text-xs sm:text-sm font-semibold rounded-lg shadow-sm transition flex items-center gap-1.5">
+            <span>📝 Notes</span>
+            <span id="notes-active-dot" class="hidden w-2 h-2 rounded-full bg-teal-700"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Multi-Week Switcher Bar -->
+      <div class="mt-4 bg-app-surface rounded-xl border border-app-muted p-2.5 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="text-xs font-bold text-slate-800 uppercase tracking-wider pl-1">Planning:</span>
+          <div class="inline-flex rounded-lg bg-app-subcard p-1 border border-app-muted">
+            <button id="week-tab-this" type="button" class="px-3 py-1.5 rounded-md text-xs font-bold transition bg-slate-800 text-white shadow-sm">
+              📅 This Week
+            </button>
+            <button id="week-tab-next" type="button" class="px-3 py-1.5 rounded-md text-xs font-bold transition text-slate-800 hover:bg-app-card">
+              🗓️ Next Week
+            </button>
+          </div>
+          <span id="active-week-summary-pill" class="text-[11px] font-medium text-slate-800 pl-1">
+            Viewing This Week's plan
+          </span>
+        </div>
+
+        <div class="flex items-center gap-2 flex-wrap">
+          <button id="copy-this-to-next-btn" type="button" class="px-2.5 py-1.5 bg-app-card hover:bg-white text-slate-800 border border-app-muted rounded-lg text-xs font-semibold transition">
+            ↪ Copy This Week → Next Week
+          </button>
+          <button id="promote-next-to-this-btn" type="button" class="px-2.5 py-1.5 bg-app-card hover:bg-white text-slate-800 border border-app-muted rounded-lg text-xs font-semibold transition" title="Move Next Week into This Week and clear Next Week">
+            ⏪ Roll Next Week → This Week
+          </button>
+        </div>
+      </div>
+
+      <!-- Auto-fill Feedback Toast -->
+      <div id="autofill-toast" class="hidden mt-3 bg-slate-800 border border-slate-700 text-slate-100 rounded-lg px-3.5 py-2 text-xs sm:text-sm flex items-center justify-between shadow-sm">
+        <span id="autofill-toast-text"></span>
+        <button id="close-toast-btn" type="button" class="text-slate-300 hover:text-white font-bold ml-3">✕</button>
+      </div>
+
+      <!-- Brain Dump / Notes Drawer (Toggled by 📝 Notes button in header) -->
+      <div id="notes-drawer" class="hidden mt-4 bg-app-surface rounded-xl border border-app-muted shadow-sm p-4 transition-all">
+        <div class="flex items-center justify-between mb-1.5">
+          <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-indigo-800"></span>
+            📝 Brain Dump &amp; Weekly Food Scratchpad
+          </h2>
+          <span class="text-[11px] font-semibold text-slate-700 bg-app-subcard px-2 py-0.5 rounded-full">Auto-saves as you type</span>
+        </div>
+        <p class="text-xs text-slate-700 mb-2.5">
+          Jot down loose ideas, fridge/freezer inventory to use up, schedule reminders (late practices, guests), or recipes you want to try soon:
+        </p>
+        <textarea id="brain-dump-textarea" rows="5" placeholder="e.g. Need to use up half a bag of spinach and ground turkey in the freezer... Thursday is late practice so keep dinner super quick..." class="w-full text-xs sm:text-sm p-3 rounded-xl border border-app-muted bg-app-input text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-700/20 focus:border-indigo-800 resize-y"></textarea>
+      </div>
+
+      <!-- Week Templates Drawer -->
+      <div id="templates-drawer" class="hidden mt-4 bg-app-surface rounded-xl border border-app-muted shadow-sm p-4 transition-all">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Save Current Week as Template -->
+          <div class="lg:col-span-5 bg-app-card border border-app-subtle rounded-xl p-3.5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <h2 class="text-sm font-bold text-indigo-950 flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-indigo-800"></span>
+                  Save Current Week as a Template
+                </h2>
+                <span id="template-save-target-badge" class="text-[11px] font-semibold text-indigo-900 bg-indigo-200/70 px-2 py-0.5 rounded-full">From: This Week</span>
+              </div>
+              <p class="text-xs text-slate-700 mb-3">
+                Have a week that worked great for everyone? Save all 7 days (including Prep/Leftover tags, Extra Veggies, and B/X alternates) to reload anytime.
+              </p>
+              <div class="flex gap-2">
+                <input type="text" id="new-template-name-input" placeholder="e.g. Busy Soccer Week, Easy Summer Menu..." class="flex-1 text-xs sm:text-sm px-3 py-1.5 rounded-lg border border-app-muted bg-app-input focus:outline-none focus:ring-2 focus:ring-indigo-600/20 focus:border-indigo-700">
+                <button id="save-template-btn" type="button" class="px-3.5 py-1.5 bg-indigo-900 hover:bg-indigo-950 text-white text-xs font-semibold rounded-lg transition shrink-0">
+                  + Save Week
+                </button>
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-600 mt-3 italic">
+              Tip: Loading a template respects your Avoid List and swaps any dish that conflicts.
+            </p>
+          </div>
+
+          <!-- Saved Templates List -->
+          <div id="saved-templates-list" class="lg:col-span-7 bg-app-subcard border border-app-muted rounded-xl p-3.5 space-y-2.5 max-h-64 overflow-y-auto pr-1">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Grocery / Store Mapping & Share Drawer -->
+      <div id="grocery-drawer" class="hidden mt-4 bg-app-surface rounded-xl border border-app-muted shadow-sm p-4 transition-all">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Left (7 cols): Store-Mapped Grocery & Prep Checklist -->
+          <div class="lg:col-span-7 bg-app-card border border-app-subtle rounded-xl p-3.5 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-700"></span>
+                  Store-Mapped Grocery &amp; Prep Checklist
+                </h2>
+                <div class="flex items-center gap-3">
+                  <button id="toggle-store-rules-btn" type="button" class="text-[11px] font-semibold px-2.5 py-1 rounded-md bg-teal-900/15 hover:bg-teal-900/25 text-teal-950 transition">
+                    🏪 Manage Stores &amp; Auto-Rules
+                  </button>
+                  <button id="clear-checked-grocery-btn" type="button" class="text-[11px] font-semibold text-teal-900 hover:text-teal-950 underline">
+                    Uncheck All
+                  </button>
+                </div>
+              </div>
+              <p class="text-xs text-slate-700 mb-3">
+                Assign any meal or ingredient to a store. Note: Days tagged <strong>🍱 Leftovers Night</strong> or <strong>🥡 Takeout</strong> won't clutter your store trip!
+              </p>
+
+              <!-- Collapsible Store & Auto-Mapping Rules Panel -->
+              <div id="store-rules-panel" class="hidden mb-3.5 bg-app-surface border border-app-muted rounded-xl p-3 shadow-sm">
+                <div class="mb-3 pb-2.5 border-b border-app-subtle">
+                  <label class="block text-[11px] font-bold text-slate-800 uppercase tracking-wider mb-1.5">Your Stores</label>
+                  <div id="store-badges-list" class="flex flex-wrap gap-1.5 mb-2">
+                    <!-- Populated by JS -->
+                  </div>
+                  <div class="flex gap-2">
+                    <input type="text" id="new-store-name-input" placeholder="Add a store (e.g. Trader Joe's, Kroger, Target)..." class="flex-1 text-xs px-2.5 py-1.5 rounded-lg border border-app-muted bg-app-input focus:outline-none focus:border-teal-700">
+                    <button id="add-store-btn" type="button" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold rounded-lg transition shrink-0">
+                      + Add Store
+                    </button>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-[11px] font-bold text-slate-800 uppercase tracking-wider mb-1">Ingredient → Store Auto-Rules</label>
+                  <p class="text-[11px] text-slate-600 mb-2">Any item containing this keyword automatically maps to that store:</p>
+                  <div class="flex flex-col sm:flex-row gap-2 mb-2">
+                    <input type="text" id="new-rule-keyword-input" placeholder="Ingredient keyword (e.g. nuggets, salmon, pouches)..." class="flex-1 text-xs px-2.5 py-1.5 rounded-lg border border-app-muted bg-app-input focus:outline-none focus:border-teal-700">
+                    <div class="flex gap-2">
+                      <select id="new-rule-store-select" class="text-xs px-2.5 py-1.5 rounded-lg border border-app-muted bg-app-input font-medium text-slate-800 focus:outline-none focus:border-teal-700">
+                        <!-- Populated by JS -->
+                      </select>
+                      <button id="add-rule-btn" type="button" class="px-3 py-1.5 bg-teal-800 hover:bg-teal-900 text-white text-xs font-semibold rounded-lg transition shrink-0">
+                        + Save Rule
+                      </button>
+                    </div>
+                  </div>
+                  <div id="store-rules-chips" class="flex flex-wrap gap-1.5 max-h-28 overflow-y-auto pt-1">
+                    <!-- Populated by JS -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Store Filter Tabs -->
+              <div id="store-filter-tabs" class="flex items-center gap-1.5 overflow-x-auto pb-2 mb-2.5 border-b border-app-subtle">
+                <!-- Populated by JS -->
+              </div>
+
+              <!-- Add Custom Grocery Item with Store Picker -->
+              <div class="flex flex-col sm:flex-row gap-2 mb-3">
+                <input type="text" id="new-grocery-input" placeholder="Add extra item (e.g. milk, applesauce pouches, foil)..." class="flex-1 text-xs sm:text-sm px-3 py-1.5 rounded-lg border border-app-muted bg-app-input focus:outline-none focus:ring-2 focus:ring-teal-600/20 focus:border-teal-700">
+                <div class="flex gap-2">
+                  <select id="new-grocery-store-select" class="text-xs px-2.5 py-1.5 rounded-lg border border-app-muted bg-app-input font-medium text-slate-800 focus:outline-none focus:border-teal-700">
+                    <!-- Populated by JS -->
+                  </select>
+                  <button id="add-grocery-btn" type="button" class="px-3 py-1.5 bg-teal-800 hover:bg-teal-900 text-white text-xs font-semibold rounded-lg transition shrink-0">
+                    + Add Item
+                  </button>
+                </div>
+              </div>
+
+              <!-- Checklist Items Container Grouped by Store -->
+              <div id="grocery-checklist-container" class="space-y-3 max-h-80 overflow-y-auto pr-1">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right (5 cols): 1-Tap Family Text Summary & Store-Grouped Copy -->
+          <div class="lg:col-span-5 bg-app-card border border-app-subtle rounded-xl p-3.5 flex flex-col justify-between">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
+                  Share Menu / Store Lists
+                </h2>
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <button id="copy-menu-btn" type="button" class="px-2.5 py-1 bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold rounded-md shadow-sm transition">
+                    📋 Copy Menu Text
+                  </button>
+                  <button id="copy-grocery-btn" type="button" class="px-2.5 py-1 bg-teal-800 hover:bg-teal-900 text-white text-xs font-semibold rounded-md shadow-sm transition">
+                    📋 Copy Grocery List
+                  </button>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mb-2">
+                <p class="text-xs text-slate-700">
+                  Preview text to send via iMessage, WhatsApp, or Notes:
+                </p>
+                <div class="inline-flex rounded-md bg-app-subcard p-0.5 text-[11px] font-semibold">
+                  <button id="preview-mode-menu" type="button" class="px-2 py-0.5 rounded bg-app-input text-slate-900 shadow-sm">Menu</button>
+                  <button id="preview-mode-stores" type="button" class="px-2 py-0.5 rounded text-slate-700 hover:text-slate-900">By Store</button>
+                </div>
+              </div>
+              <textarea id="share-summary-textarea" rows="10" readonly class="w-full text-xs font-mono p-2.5 rounded-lg border border-app-muted bg-app-input text-slate-800 focus:outline-none resize-none"></textarea>
+            </div>
+            <div class="mt-2 flex items-center justify-between text-[11px] text-slate-700">
+              <span id="copy-feedback-msg" class="font-semibold text-teal-900"></span>
+              <span>Grouped automatically by store</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Favorites & Avoid List Drawer -->
+      <div id="preferences-drawer" class="hidden mt-4 bg-app-surface rounded-xl border border-app-muted shadow-sm p-4 transition-all">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Avoid List Section (Deep Burgundy / Maroon - Zero Bright Red) -->
+          <div class="bg-burgundy-soft border border-burgundy-soft rounded-xl p-3.5">
+            <div class="flex items-center justify-between mb-1">
+              <h2 class="text-sm font-bold text-burgundy-deep flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-burgundy-deep"></span>
+                Family Avoid List (Never Suggest)
+              </h2>
+              <span class="text-[11px] font-semibold text-burgundy-deep bg-burgundy-badge px-2 py-0.5 rounded-full">Filters Auto-Fill</span>
+            </div>
+            <p class="text-xs text-slate-800 mb-3">
+              Any meal containing these ingredients or dishes will be skipped by Load Sample Week and single-day shuffle.
+            </p>
+            <div class="flex gap-2 mb-3">
+              <input type="text" id="new-avoid-input" placeholder="e.g. mashed potatoes, mushrooms, fish..." class="flex-1 text-xs sm:text-sm px-3 py-1.5 rounded-lg border border-burgundy-soft bg-app-input focus:outline-none focus:ring-2 focus:ring-slate-500/20">
+              <button id="add-avoid-btn" type="button" class="px-3 py-1.5 bg-burgundy-deep text-white text-xs font-semibold rounded-lg transition shrink-0">
+                + Add Avoid
+              </button>
+            </div>
+            <div id="avoid-chips-container" class="flex flex-wrap gap-1.5">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+
+          <!-- Quick-Pick Favorites Manager -->
+          <div class="bg-app-card border border-app-subtle rounded-xl p-3.5">
+            <div class="flex items-center justify-between mb-1">
+              <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-teal-700"></span>
+                Quick-Pick Favorites Bank
+              </h2>
+              <span class="text-[11px] font-semibold text-teal-950 bg-teal-900/15 px-2 py-0.5 rounded-full">1-Tap Insert</span>
+            </div>
+            <p class="text-xs text-slate-700 mb-3">
+              Tap any text box on a day card, then tap a favorite chip below it to fill it in one click. Add your own staples here:
+            </p>
+            <div class="flex flex-col sm:flex-row gap-2 mb-3">
+              <select id="new-fav-category" class="text-xs sm:text-sm px-2.5 py-1.5 rounded-lg border border-app-muted bg-app-input text-slate-800 font-medium focus:outline-none focus:border-teal-700">
+                <option value="main">Main Dinner</option>
+                <option value="veggies">Extra Veggies</option>
+                <option value="bAlt">B Alt</option>
+                <option value="xAlt">X Alt</option>
+              </select>
+              <div class="flex flex-1 gap-2">
+                <input type="text" id="new-fav-input" placeholder="Add a favorite meal or side..." class="flex-1 text-xs sm:text-sm px-3 py-1.5 rounded-lg border border-app-muted bg-app-input focus:outline-none focus:ring-2 focus:ring-teal-600/20 focus:border-teal-700">
+                <button id="add-fav-btn" type="button" class="px-3 py-1.5 bg-teal-800 hover:bg-teal-900 text-white text-xs font-semibold rounded-lg transition shrink-0">
+                  + Save Chip
+                </button>
+              </div>
+            </div>
+            <div id="fav-manager-list" class="space-y-2 text-xs">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile-Friendly Navigation & View Toggle Bar -->
+      <div class="mt-4 pt-3 border-t border-app-muted flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <!-- View Mode Switcher -->
+        <div class="inline-flex rounded-lg bg-app-surface p-1 border border-app-muted self-start">
+          <button id="view-week-btn" type="button" class="px-3 py-1.5 rounded-md text-xs font-semibold transition bg-slate-800 text-white shadow-sm">
+            Full Week
+          </button>
+          <button id="view-day-btn" type="button" class="px-3 py-1.5 rounded-md text-xs font-semibold transition text-slate-800 hover:text-slate-950">
+            Single Day (Narrow)
+          </button>
+        </div>
+
+        <!-- Quick Day Pill Bar -->
+        <div id="day-pills" class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
+          <!-- Generated by JS -->
+        </div>
+      </div>
+    </header>
+
+    <!-- Legend & Prep Tag Summary Bar -->
+    <div class="bg-app-surface rounded-xl p-3 sm:p-4 mb-5 border border-app-muted shadow-sm flex flex-col lg:flex-row lg:items-center lg:justify-between gap-2.5 text-xs no-print">
+      <div class="flex flex-wrap gap-3 sm:gap-4 items-center">
+        <span class="font-bold text-slate-900">Quick Guide:</span>
+        <div class="flex items-center gap-1.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-teal-700"></span>
+          <span class="text-slate-800 font-medium">Main Dinner (Mama, Pops, Arrw)</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
+          <span class="text-slate-800 font-medium">Extra Veggies</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-purple-700"></span>
+          <span class="text-purple-950 font-medium">B Alt</span>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-600"></span>
+          <span class="text-amber-950 font-medium">X Alt</span>
+        </div>
+      </div>
+      <div id="week-prep-summary" class="text-[11px] font-medium text-slate-800">
+        <!-- Populated by JS with count of Leftovers / Slow Cooker / Make Ahead nights -->
+      </div>
+    </div>
+
+    <!-- Days Grid -->
+    <div id="calendar-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <!-- Generated by JavaScript -->
+    </div>
+
+    <!-- Clean Fridge / Print Sheet View (Toggled from bottom section) -->
+    <section id="fridge-view-section" class="hidden mt-8 bg-app-input rounded-2xl border-2 border-slate-700 p-5 shadow-md">
+      <div class="flex flex-wrap items-center justify-between gap-3 pb-3 mb-4 border-b-2 border-slate-700">
+        <div>
+          <h2 id="fridge-sheet-title" class="text-xl font-bold text-slate-900 tracking-tight">
+            Family Dinner Menu — This Week
+          </h2>
+          <p class="text-xs text-slate-600">Prep Style • Main Dinner (Mama, Pops, Arrw) • Extra Veggies • Kid Alternates (B &amp; X)</p>
+        </div>
+        <div class="flex items-center gap-2 no-print">
+          <button id="print-fridge-btn" type="button" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold rounded-lg shadow-sm transition">
+            🖨️ Print Sheet
+          </button>
+          <button id="close-fridge-view-btn" type="button" class="px-3 py-1.5 bg-app-surface hover:bg-app-subcard text-slate-800 text-xs font-semibold rounded-lg transition">
+            Close Fridge View
+          </button>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-slate-400 bg-app-surface text-slate-900">
+              <th class="py-2 px-2.5 font-bold w-28">Day &amp; Style</th>
+              <th class="py-2 px-2.5 font-bold">Main Dinner (Mama, Pops, Arrw)</th>
+              <th class="py-2 px-2.5 font-bold">Extra Veggies</th>
+              <th class="py-2 px-2.5 font-bold text-purple-950">B Alt</th>
+              <th class="py-2 px-2.5 font-bold text-amber-950">X Alt</th>
+            </tr>
+          </thead>
+          <tbody id="fridge-table-body" class="divide-y divide-slate-300">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Bottom Export, Fridge View, Clear Week & Device Backup Section (Hidden automatically in Single Day (Narrow) mode) -->
+    <footer id="bottom-export-footer" class="mt-10 pt-6 border-t-2 border-app-muted no-print">
+      <div class="bg-app-surface rounded-2xl border border-app-muted shadow-sm p-4 sm:p-5">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-4 border-b border-app-subtle">
+          <div>
+            <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span>📦 Export, Fridge Sheet &amp; Week Reset</span>
+            </h2>
+            <p class="text-xs text-slate-700 mt-0.5">
+              View a compact fridge table, download a backup file, copy a sync code, or clear the current week's entries (with 1-tap Undo).
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 shrink-0">
+            <button id="install-pwa-btn" type="button" class="hidden px-3.5 py-2 bg-indigo-900 hover:bg-indigo-950 text-white text-xs font-semibold rounded-lg shadow-sm transition">📲 Install App</button>
+            <button id="toggle-fridge-view-btn" type="button" class="px-3.5 py-2 bg-teal-800 hover:bg-teal-900 text-white text-xs font-semibold rounded-lg shadow-sm transition">
+              🧲 Toggle Fridge Sheet View
+            </button>
+            <button id="download-json-backup-btn" type="button" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold rounded-lg shadow-sm transition">
+              ⬇️ Download Backup (.json)
+            </button>
+            <button id="clear-all-btn" type="button" class="px-3.5 py-2 bg-burgundy-soft hover:bg-burgundy-badge text-burgundy-deep border border-burgundy-soft text-xs font-semibold rounded-lg shadow-sm transition">
+              Clear All
+            </button>
+            <button id="undo-clear-btn" type="button" class="hidden px-3.5 py-2 bg-amber-100 hover:bg-amber-200 text-amber-950 border border-amber-400 text-xs font-bold rounded-lg shadow-sm transition">
+              ↩️ Undo Last Clear
+            </button>
+          </div>
+        </div>
+
+        <!-- Clear Confirmation Banner (Appears right inside bottom footer when Clear All is clicked) -->
+        <div id="clear-confirm-banner" class="hidden mt-4 bg-burgundy-soft border border-burgundy-soft rounded-xl p-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <p id="clear-confirm-text" class="text-xs sm:text-sm text-burgundy-deep font-medium">Are you sure you want to clear this week's meal plan? (You can Undo right after if needed.)</p>
+          <div class="flex gap-2 shrink-0">
+            <button id="confirm-clear-yes" type="button" class="px-3 py-1.5 bg-burgundy-deep text-white text-xs font-semibold rounded-lg transition">
+              Yes, Clear Week
+            </button>
+            <button id="confirm-clear-cancel" type="button" class="px-3 py-1.5 bg-app-input hover:bg-white text-slate-800 border border-app-muted text-xs font-semibold rounded-lg transition">
+              Cancel
+            </button>
+          </div>
+        </div>
+
+        <!-- Copy / Paste Sync Code Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
+          <!-- Export / Copy Code -->
+          <div class="bg-app-card rounded-xl p-3.5 border border-app-subtle">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-xs font-bold text-slate-800">1. Copy Sync Code from This Device</span>
+              <button id="copy-sync-code-btn" type="button" class="px-2.5 py-1 bg-teal-800 hover:bg-teal-900 text-white text-xs font-semibold rounded-md transition">
+                📋 Copy Sync Code
+              </button>
+            </div>
+            <p class="text-[11px] text-slate-700 mb-2">
+              Includes This Week, Next Week, Brain Dump Notes, Prep/Leftover tags, Templates, Favorites, Avoid List &amp; Store Rules:
+            </p>
+            <textarea id="export-sync-textarea" rows="3" readonly class="w-full text-[11px] font-mono p-2 rounded-lg border border-app-muted bg-app-input text-slate-700 focus:outline-none resize-none"></textarea>
+          </div>
+
+          <!-- Import / Restore Code -->
+          <div class="bg-app-card rounded-xl p-3.5 border border-app-subtle">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="text-xs font-bold text-slate-800">2. Paste &amp; Restore Sync Code</span>
+              <button id="import-sync-code-btn" type="button" class="px-2.5 py-1 bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold rounded-md transition">
+                📥 Restore Backup Code
+              </button>
+            </div>
+            <p class="text-[11px] text-slate-700 mb-2">
+              Paste a sync code from your computer or phone below and tap Restore:
+            </p>
+            <textarea id="import-sync-textarea" rows="3" placeholder="Paste your backup JSON code here..." class="w-full text-[11px] font-mono p-2 rounded-lg border border-app-muted bg-app-input text-slate-800 focus:outline-none focus:border-slate-600 resize-none"></textarea>
+          </div>
+        </div>
+
+        <div id="backup-status-msg" class="mt-2.5 text-xs font-semibold text-teal-900 min-h-[18px]"></div>
+      </div>
+
+      <!-- Extra bottom buffer spacer so mobile thumb bars / bottom edges never crowd the controls -->
+      <div class="h-24 sm:h-28" aria-hidden="true"></div>
+    </footer>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'family_meal_planner_v9';
+    const LEGACY_KEYS = ['family_meal_planner_v8', 'family_meal_planner_v7', 'family_meal_planner_v6', 'family_meal_planner_v5', 'family_meal_planner_v4', 'family_meal_planner_v3', 'family_meal_planner_v2'];
+
+    const days = [
+      { id: 'mon', short: 'Mon', pill: 'M', name: 'Monday' },
+      { id: 'tue', short: 'Tue', pill: 'T', name: 'Tuesday' },
+      { id: 'wed', short: 'Wed', pill: 'W', name: 'Wednesday' },
+      { id: 'thu', short: 'Thu', pill: 'Th', name: 'Thursday' },
+      { id: 'fri', short: 'Fri', pill: 'F', name: 'Friday' },
+      { id: 'sat', short: 'Sat', pill: 'Sa', name: 'Saturday' },
+      { id: 'sun', short: 'Sun', pill: 'Su', name: 'Sunday' }
+    ];
+
+    // Prep & Leftover Day Tags
+    const prepTags = [
+      { id: 'fresh', label: '🍳 Cook Fresh', short: 'Cook Fresh', badgeClass: 'bg-app-surface text-slate-800 border-app-muted' },
+      { id: 'leftovers', label: '🍱 Leftovers Night', short: 'Leftovers', badgeClass: 'bg-teal-100 text-teal-950 border-teal-400' },
+      { id: 'quick20', label: '⚡ 20-Min Quick', short: '20-Min Quick', badgeClass: 'bg-amber-100 text-amber-950 border-amber-400' },
+      { id: 'slowcooker', label: '🍲 Slow Cooker', short: 'Slow Cooker', badgeClass: 'bg-indigo-100 text-indigo-950 border-indigo-400' },
+      { id: 'makeahead', label: '🥣 Make Ahead / Prep', short: 'Make Ahead', badgeClass: 'bg-purple-100 text-purple-950 border-purple-400' },
+      { id: 'freezer', label: '🧊 From Freezer', short: 'Freezer Meal', badgeClass: 'bg-sky-100 text-sky-950 border-sky-400' },
+      { id: 'takeout', label: '🥡 Takeout / Out', short: 'Takeout', badgeClass: 'bg-slate-300 text-slate-900 border-slate-400' }
+    ];
+
+    function getPrepTagMeta(tagId) {
+      return prepTags.find(t => t.id === tagId) || prepTags[0];
+    }
+
+    const mealPool = [
+      {
+        prepTag: 'fresh',
+        leftoverFrom: '',
+        main: 'Spaghetti with meat sauce & garlic bread (cook extra for leftovers)',
+        veggies: 'Side Caesar salad + extra roasted zucchini',
+        bEnabled: true,
+        bAlt: 'Plain butter noodles with parmesan',
+        xEnabled: true,
+        xAlt: 'Butter noodles + applesauce pouch'
+      },
+      {
+        prepTag: 'quick20',
+        leftoverFrom: '',
+        main: 'Taco Tuesday: seasoned ground turkey, shells & toppings',
+        veggies: 'Fajita bell pepper strips & fresh pico de gallo',
+        bEnabled: false,
+        bAlt: '',
+        xEnabled: true,
+        xAlt: 'Cheese quesadilla cut into finger strips'
+      },
+      {
+        prepTag: 'makeahead',
+        leftoverFrom: '',
+        main: 'Sheet-pan chicken sausage, peppers & sweet potatoes (chopped ahead)',
+        veggies: 'Double roasted broccoli florets',
+        bEnabled: true,
+        bAlt: 'Chicken nuggets & cucumber wheels',
+        xEnabled: true,
+        xAlt: 'Chicken nuggets & banana slices'
+      },
+      {
+        prepTag: 'slowcooker',
+        leftoverFrom: '',
+        main: 'Slow-cooker beef chili with cornbread',
+        veggies: 'Steamed green beans on the side',
+        bEnabled: true,
+        bAlt: 'Warm cornbread + mild cheddar cubes',
+        xEnabled: true,
+        xAlt: 'Macaroni & cheese + diced strawberries'
+      },
+      {
+        prepTag: 'leftovers',
+        leftoverFrom: 'thu',
+        main: 'Leftovers (Thu): Slow-cooker beef chili with cornbread',
+        veggies: 'Big garden salad with balsamic vinaigrette',
+        bEnabled: true,
+        bAlt: 'Warm cornbread + mild cheddar cubes',
+        xEnabled: true,
+        xAlt: 'Macaroni & cheese + diced strawberries'
+      },
+      {
+        prepTag: 'fresh',
+        leftoverFrom: '',
+        main: 'Grilled burgers & oven sweet potato fries',
+        veggies: 'Grilled asparagus & sliced tomatoes',
+        bEnabled: true,
+        bAlt: 'Plain mini burger on bun with ketchup',
+        xEnabled: true,
+        xAlt: 'Grilled cheese triangles & soft fries'
+      },
+      {
+        prepTag: 'makeahead',
+        leftoverFrom: '',
+        main: 'Herb roast chicken with garlic rice pilaf & dinner rolls',
+        veggies: 'Honey-glazed roasted carrots & snap peas',
+        bEnabled: true,
+        bAlt: 'Shredded chicken, buttered roll & apple slices',
+        xEnabled: true,
+        xAlt: 'Diced chicken, soft rice & sweet peas'
+      },
+      {
+        prepTag: 'quick20',
+        leftoverFrom: '',
+        main: 'Teriyaki chicken bowls with steamed jasmine rice',
+        veggies: 'Steamed edamame, broccoli & cabbage slaw',
+        bEnabled: true,
+        bAlt: 'White rice with soy sauce & cucumber',
+        xEnabled: true,
+        xAlt: 'Rice balls & mandarin orange segments'
+      },
+      {
+        prepTag: 'makeahead',
+        leftoverFrom: '',
+        main: 'Baked ziti pasta with Italian sausage & mozzarella',
+        veggies: 'Roasted Brussels sprouts & garlic spinach',
+        bEnabled: true,
+        bAlt: 'Plain penne pasta with melted mozzarella',
+        xEnabled: true,
+        xAlt: 'Buttered penne noodles & soft cooked carrots'
+      },
+      {
+        prepTag: 'slowcooker',
+        leftoverFrom: '',
+        main: 'BBQ pulled pork sliders & baked beans',
+        veggies: 'Crisp vinegar coleslaw & roasted corn',
+        bEnabled: true,
+        bAlt: 'Plain Hawaiian roll slider with cheese & fruit',
+        xEnabled: true,
+        xAlt: 'Shredded pork bits, Hawaiian roll & blueberries'
+      },
+      {
+        prepTag: 'fresh',
+        leftoverFrom: '',
+        main: 'Roast chicken with mashed potatoes & gravy',
+        veggies: 'Steamed broccoli & roasted carrots',
+        bEnabled: true,
+        bAlt: 'Mashed potatoes with plain shredded chicken',
+        xEnabled: true,
+        xAlt: 'Mashed potatoes with butter & soft peas'
+      },
+      {
+        prepTag: 'quick20',
+        leftoverFrom: '',
+        main: 'Lemon herb salmon with quinoa & roasted zucchini',
+        veggies: 'Extra roasted zucchini & sautéed kale',
+        bEnabled: true,
+        bAlt: 'Fish sticks & buttered corn',
+        xEnabled: true,
+        xAlt: 'Scrambled egg bites & toast strips'
+      }
+    ];
+
+    const defaultWeekTemplates = [
+      {
+        id: 'tpl-busy-week',
+        name: 'Busy School & Practice Week (With Leftovers & Slow Cooker)',
+        meals: {
+          mon: {
+            prepTag: 'quick20',
+            leftoverFrom: '',
+            main: 'Rotisserie chicken tacos with bagged slaw',
+            veggies: 'Sliced bell peppers & side black beans',
+            bEnabled: true,
+            bAlt: 'Cheese quesadilla',
+            xEnabled: true,
+            xAlt: 'Quesadilla finger strips + berries'
+          },
+          tue: {
+            prepTag: 'slowcooker',
+            leftoverFrom: '',
+            main: 'Slow-cooker beef chili with cornbread (make extra for Thu!)',
+            veggies: 'Steamed green beans on the side',
+            bEnabled: true,
+            bAlt: 'Warm cornbread & cheddar cubes',
+            xEnabled: true,
+            xAlt: 'Mac & cheese + diced strawberries'
+          },
+          wed: {
+            prepTag: 'makeahead',
+            leftoverFrom: '',
+            main: 'Sheet-pan chicken sausage, peppers & sweet potatoes',
+            veggies: 'Extra roasted broccoli & peppers',
+            bEnabled: true,
+            bAlt: 'Chicken nuggets & apple slices',
+            xEnabled: true,
+            xAlt: 'Chicken nuggets & banana slices'
+          },
+          thu: {
+            prepTag: 'leftovers',
+            leftoverFrom: 'tue',
+            main: 'Leftovers (Tue): Slow-cooker beef chili with cornbread',
+            veggies: 'Sautéed spinach & side garden salad',
+            bEnabled: true,
+            bAlt: 'Warm cornbread & cheddar cubes',
+            xEnabled: true,
+            xAlt: 'Mac & cheese + diced strawberries'
+          },
+          fri: {
+            prepTag: 'takeout',
+            leftoverFrom: '',
+            main: 'Takeout or frozen pizza night',
+            veggies: 'Big bagged Caesar salad kit',
+            bEnabled: false,
+            bAlt: '',
+            xEnabled: false,
+            xAlt: ''
+          },
+          sat: {
+            prepTag: 'quick20',
+            leftoverFrom: '',
+            main: 'Teriyaki chicken bowls with microwave jasmine rice',
+            veggies: 'Steamed edamame & broccoli',
+            bEnabled: true,
+            bAlt: 'White rice & cucumber wheels',
+            xEnabled: true,
+            xAlt: 'Soft rice, diced chicken & mandarin oranges'
+          },
+          sun: {
+            prepTag: 'fresh',
+            leftoverFrom: '',
+            main: 'Ravioli bake with marinara & garlic bread',
+            veggies: 'Roasted zucchini & bell peppers',
+            bEnabled: true,
+            bAlt: 'Plain cheese ravioli with butter',
+            xEnabled: true,
+            xAlt: 'Halved cheese ravioli + applesauce pouch'
+          }
+        }
+      },
+      {
+        id: 'tpl-crowd-pleasers',
+        name: 'Family Favorites Rotation',
+        meals: {
+          mon: { ...mealPool[0] },
+          tue: { ...mealPool[1] },
+          wed: { ...mealPool[2] },
+          thu: { ...mealPool[3] },
+          fri: { ...mealPool[4] },
+          sat: { ...mealPool[5] },
+          sun: { ...mealPool[6] }
+        }
+      }
+    ];
+
+    const defaultFavorites = {
+      main: [
+        'Tacos & toppings',
+        'Spaghetti & meat sauce',
+        'Homemade pizza night',
+        'Sheet-pan chicken & sweet potatoes',
+        'Teriyaki chicken rice bowls',
+        'Grilled burgers & fries'
+      ],
+      veggies: [
+        'Roasted broccoli florets',
+        'Big side garden salad',
+        'Steamed green beans',
+        'Bell pepper & cucumber strips',
+        'Roasted zucchini & squash',
+        'Grilled asparagus'
+      ],
+      bAlt: [
+        'Butter noodles with parmesan',
+        'Cheese quesadilla',
+        'Chicken nuggets & fruit',
+        'PB&J uncrustable + apple slices',
+        'Mini cheese pizza',
+        'Grilled cheese sandwich'
+      ],
+      xAlt: [
+        'Quesadilla finger strips',
+        'Mac & cheese + berries',
+        'Chicken nuggets & banana',
+        'Butter noodles + applesauce',
+        'Scrambled eggs & toast strips',
+        'Cheese cubes, crackers & grapes (halved)'
+      ]
+    };
+
+    const defaultAvoidList = ['mashed potatoes'];
+    const defaultStores = ['Publix', 'Costco', 'Aldi', 'Target', 'Walmart'];
+
+    const defaultStoreRules = [
+      { keyword: 'nuggets', store: 'Costco' },
+      { keyword: 'pouch', store: 'Costco' },
+      { keyword: 'berries', store: 'Costco' },
+      { keyword: 'strawberries', store: 'Costco' },
+      { keyword: 'rotisserie', store: 'Costco' },
+      { keyword: 'ravioli', store: 'Costco' },
+      { keyword: 'chicken sausage', store: 'Aldi' },
+      { keyword: 'quesadilla', store: 'Aldi' },
+      { keyword: 'noodles', store: 'Aldi' },
+      { keyword: 'waffles', store: 'Aldi' },
+      { keyword: 'macaroni', store: 'Target' },
+      { keyword: 'mac & cheese', store: 'Target' },
+      { keyword: 'salad', store: 'Publix' },
+      { keyword: 'broccoli', store: 'Publix' },
+      { keyword: 'zucchini', store: 'Publix' },
+      { keyword: 'asparagus', store: 'Publix' },
+      { keyword: 'green beans', store: 'Publix' },
+      { keyword: 'spaghetti', store: 'Publix' },
+      { keyword: 'taco', store: 'Publix' },
+      { keyword: 'chili', store: 'Publix' },
+      { keyword: 'pizza', store: 'Aldi' },
+      { keyword: 'burgers', store: 'Costco' },
+      { keyword: 'roast chicken', store: 'Costco' }
+    ];
+
+    // State management
+    let activeWeekKey = 'thisWeek';
+    let viewMode = 'week';
+    let activeDayId = 'mon';
+    let activeInputInfo = null;
+    let activeStoreFilter = 'ALL';
+    let sharePreviewMode = 'menu';
+
+    let weeksData = {
+      thisWeek: {},
+      nextWeek: {}
+    };
+    let mealState = {};
+    let brainDumpNotes = '';
+    let lastClearedSnapshot = null; // Stores { weekKey, data } so accidental Clear All can be undone in 1 tap
+
+    let weekTemplates = JSON.parse(JSON.stringify(defaultWeekTemplates));
+    let favorites = JSON.parse(JSON.stringify(defaultFavorites));
+    let avoidList = [...defaultAvoidList];
+    let stores = [...defaultStores];
+    let storeRules = JSON.parse(JSON.stringify(defaultStoreRules));
+    let itemStoreOverrides = {};
+    let checkedGroceryKeys = {};
+    let customGroceryItems = [];
+    let poolOffset = 0;
+
+    function getEmptyMealState() {
+      const state = {};
+      days.forEach(d => {
+        state[d.id] = {
+          prepTag: 'fresh',
+          leftoverFrom: '',
+          main: '',
+          veggies: '',
+          bEnabled: false,
+          bAlt: '',
+          xEnabled: false,
+          xAlt: ''
+        };
+      });
+      return state;
+    }
+
+    function normalizeWeekObj(rawWeek) {
+      const base = getEmptyMealState();
+      if (!rawWeek) return base;
+      days.forEach(d => {
+        if (rawWeek[d.id]) {
+          base[d.id] = { ...base[d.id], ...rawWeek[d.id] };
+          if (!base[d.id].prepTag) base[d.id].prepTag = 'fresh';
+          if (typeof base[d.id].leftoverFrom !== 'string') base[d.id].leftoverFrom = '';
+        }
+      });
+      return base;
+    }
+
+    function getFullBackupPayload() {
+      weeksData[activeWeekKey] = mealState;
+      return {
+        activeWeekKey: activeWeekKey,
+        weeksData: weeksData,
+        meals: weeksData.thisWeek,
+        brainDumpNotes: brainDumpNotes,
+        weekTemplates: weekTemplates,
+        favorites: favorites,
+        avoidList: avoidList,
+        stores: stores,
+        storeRules: storeRules,
+        itemStoreOverrides: itemStoreOverrides,
+        checkedGroceryKeys: checkedGroceryKeys,
+        customGroceryItems: customGroceryItems
+      };
+    }
+
+    function applyParsedBackup(parsed) {
+      weeksData.thisWeek = normalizeWeekObj(parsed.weeksData ? parsed.weeksData.thisWeek : parsed.meals);
+      weeksData.nextWeek = normalizeWeekObj(parsed.weeksData ? parsed.weeksData.nextWeek : null);
+      if (parsed.activeWeekKey === 'nextWeek' || parsed.activeWeekKey === 'thisWeek') {
+        activeWeekKey = parsed.activeWeekKey;
+      }
+      mealState = weeksData[activeWeekKey];
+      if (typeof parsed.brainDumpNotes === 'string') brainDumpNotes = parsed.brainDumpNotes;
+      if (Array.isArray(parsed.weekTemplates)) weekTemplates = parsed.weekTemplates;
+      if (parsed.favorites) favorites = { ...defaultFavorites, ...parsed.favorites };
+      if (Array.isArray(parsed.avoidList)) avoidList = parsed.avoidList;
+      if (Array.isArray(parsed.stores) && parsed.stores.length > 0) stores = parsed.stores;
+      if (Array.isArray(parsed.storeRules)) storeRules = parsed.storeRules;
+      if (parsed.itemStoreOverrides) itemStoreOverrides = parsed.itemStoreOverrides;
+      if (parsed.checkedGroceryKeys) checkedGroceryKeys = parsed.checkedGroceryKeys;
+      if (Array.isArray(parsed.customGroceryItems)) customGroceryItems = parsed.customGroceryItems;
+    }
+
+    function loadFromStorage() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          applyParsedBackup(parsed);
+          return;
+        }
+        for (const k of LEGACY_KEYS) {
+          const legacyRaw = localStorage.getItem(k);
+          if (legacyRaw) {
+            const legacyParsed = JSON.parse(legacyRaw);
+            applyParsedBackup(legacyParsed);
+            return;
+          }
+        }
+      } catch (e) {
+        // Ignore storage errors in sandboxed frames
+      }
+      weeksData.thisWeek = getEmptyMealState();
+      weeksData.nextWeek = getEmptyMealState();
+      mealState = weeksData[activeWeekKey];
+    }
+
+    function updateNotesIndicator() {
+      const dot = document.getElementById('notes-active-dot');
+      const area = document.getElementById('brain-dump-textarea');
+      if (area && area.value !== brainDumpNotes) {
+        area.value = brainDumpNotes;
+      }
+      if (dot) {
+        if (brainDumpNotes && brainDumpNotes.trim().length > 0) {
+          dot.classList.remove('hidden');
+        } else {
+          dot.classList.add('hidden');
+        }
+      }
+    }
+
+    function updateUndoButtonUI() {
+      const undoBtn = document.getElementById('undo-clear-btn');
+      if (!undoBtn) return;
+      if (lastClearedSnapshot) {
+        undoBtn.classList.remove('hidden');
+      } else {
+        undoBtn.classList.add('hidden');
+      }
+    }
+
+    function saveToStorage() {
+      const payload = getFullBackupPayload();
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      } catch (e) {
+        // Ignore storage errors
+      }
+      flashSavedIndicator();
+      updateWeekSwitcherUI();
+      updateWeekPrepSummary();
+      updateNotesIndicator();
+      updateUndoButtonUI();
+      renderTemplatesDrawer();
+      renderGroceryAndShareDrawer();
+      renderFridgeTable();
+      updateBackupSyncTextarea();
+    }
+
+    let saveTimeout = null;
+    function flashSavedIndicator() {
+      const el = document.getElementById('save-status');
+      if (!el) return;
+      el.textContent = 'Auto-saved ✓';
+      if (saveTimeout) clearTimeout(saveTimeout);
+      saveTimeout = setTimeout(() => {
+        el.textContent = 'Saved';
+      }, 1500);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('autofill-toast');
+      const text = document.getElementById('autofill-toast-text');
+      if (!toast || !text) return;
+      text.textContent = msg;
+      toast.classList.remove('hidden');
+    }
+
+    function showBackupStatus(msg, isError) {
+      const el = document.getElementById('backup-status-msg');
+      if (!el) return;
+      el.textContent = msg;
+      el.className = `mt-2.5 text-xs font-semibold min-h-[18px] ${isError ? 'text-burgundy-deep' : 'text-teal-900'}`;
+      setTimeout(() => {
+        if (el.textContent === msg) el.textContent = '';
+      }, 4000);
+    }
+
+    function countPlannedDays(weekObj) {
+      if (!weekObj) return 0;
+      return days.filter(d => weekObj[d.id] && weekObj[d.id].main && weekObj[d.id].main.trim().length > 0).length;
+    }
+
+    function getActiveWeekLabel() {
+      return activeWeekKey === 'thisWeek' ? 'This Week' : 'Next Week';
+    }
+
+    function updateWeekPrepSummary() {
+      const el = document.getElementById('week-prep-summary');
+      if (!el) return;
+      let leftoversCount = 0;
+      let prepCount = 0;
+      days.forEach(d => {
+        const tag = mealState[d.id] ? mealState[d.id].prepTag : 'fresh';
+        if (tag === 'leftovers') leftoversCount++;
+        if (tag === 'slowcooker' || tag === 'makeahead' || tag === 'freezer') prepCount++;
+      });
+      el.textContent = `${getActiveWeekLabel()} Mix: ${leftoversCount} Leftover night(s) • ${prepCount} Prep/Slow-Cooker/Freezer night(s)`;
+    }
+
+    function updateWeekSwitcherUI() {
+      const thisBtn = document.getElementById('week-tab-this');
+      const nextBtn = document.getElementById('week-tab-next');
+      const summaryPill = document.getElementById('active-week-summary-pill');
+      const tplBadge = document.getElementById('template-save-target-badge');
+
+      const thisCount = countPlannedDays(weeksData.thisWeek);
+      const nextCount = countPlannedDays(weeksData.nextWeek);
+
+      if (thisBtn && nextBtn) {
+        thisBtn.textContent = `📅 This Week (${thisCount}/7)`;
+        nextBtn.textContent = `🗓️ Next Week (${nextCount}/7)`;
+
+        if (activeWeekKey === 'thisWeek') {
+          thisBtn.className = 'px-3 py-1.5 rounded-md text-xs font-bold transition bg-slate-800 text-white shadow-sm';
+          nextBtn.className = 'px-3 py-1.5 rounded-md text-xs font-bold transition text-slate-800 hover:bg-app-card';
+        } else {
+          nextBtn.className = 'px-3 py-1.5 rounded-md text-xs font-bold transition bg-slate-800 text-white shadow-sm';
+          thisBtn.className = 'px-3 py-1.5 rounded-md text-xs font-bold transition text-slate-800 hover:bg-app-card';
+        }
+      }
+
+      if (summaryPill) {
+        summaryPill.textContent = `Editing ${getActiveWeekLabel()} (${activeWeekKey === 'thisWeek' ? thisCount : nextCount} of 7 dinners planned)`;
+      }
+      if (tplBadge) {
+        tplBadge.textContent = `From: ${getActiveWeekLabel()}`;
+      }
+    }
+
+    function textHasAvoidedItem(text) {
+      if (!text) return false;
+      const lower = text.toLowerCase();
+      return avoidList.some(term => term.trim() !== '' && lower.includes(term.trim().toLowerCase()));
+    }
+
+    function templateConflictsWithAvoid(template) {
+      return (
+        textHasAvoidedItem(template.main) ||
+        textHasAvoidedItem(template.veggies) ||
+        textHasAvoidedItem(template.bAlt) ||
+        textHasAvoidedItem(template.xAlt)
+      );
+    }
+
+    // Render Fridge Sheet Table
+    function renderFridgeTable() {
+      const titleEl = document.getElementById('fridge-sheet-title');
+      if (titleEl) {
+        titleEl.textContent = `Family Dinner Menu — ${getActiveWeekLabel()}`;
+      }
+      const tbody = document.getElementById('fridge-table-body');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      days.forEach(d => {
+        const st = mealState[d.id] || {};
+        const tagMeta = getPrepTagMeta(st.prepTag);
+        const fromDayObj = st.leftoverFrom ? days.find(x => x.id === st.leftoverFrom) : null;
+        const styleLabel = fromDayObj && st.prepTag === 'leftovers' ? `${tagMeta.label} (${fromDayObj.short})` : tagMeta.label;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-2.5 px-2.5 font-bold text-slate-800">
+            <div>${d.name}</div>
+            <span class="inline-block mt-0.5 text-[10px] font-semibold px-1.5 py-0.5 rounded border ${tagMeta.badgeClass}">${styleLabel}</span>
+          </td>
+          <td class="py-2.5 px-2.5 text-slate-800 font-medium">${st.main && st.main.trim() ? st.main : '<span class="text-slate-400 italic">—</span>'}</td>
+          <td class="py-2.5 px-2.5 text-teal-900">${st.veggies && st.veggies.trim() ? st.veggies : '<span class="text-slate-400 italic">—</span>'}</td>
+          <td class="py-2.5 px-2.5 text-purple-950">${st.bEnabled && st.bAlt && st.bAlt.trim() ? st.bAlt : '<span class="text-slate-500 text-xs">Same as main</span>'}</td>
+          <td class="py-2.5 px-2.5 text-amber-950">${st.xEnabled && st.xAlt && st.xAlt.trim() ? st.xAlt : '<span class="text-slate-500 text-xs">Same as main</span>'}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function updateBackupSyncTextarea() {
+      const exportArea = document.getElementById('export-sync-textarea');
+      if (exportArea) {
+        exportArea.value = JSON.stringify(getFullBackupPayload());
+      }
+    }
+
+    // Render Saved Week Templates Drawer
+    function renderTemplatesDrawer() {
+      const countBadge = document.getElementById('templates-count-badge');
+      if (countBadge) {
+        countBadge.textContent = weekTemplates.length;
+      }
+
+      const listEl = document.getElementById('saved-templates-list');
+      if (!listEl) return;
+      listEl.innerHTML = '';
+
+      if (weekTemplates.length === 0) {
+        listEl.innerHTML = `<p class="text-xs text-slate-600 italic py-2">No saved week templates yet. Plan a week you like and save it on the left!</p>`;
+        return;
+      }
+
+      weekTemplates.forEach((tpl, idx) => {
+        const sampleMeals = days
+          .map(d => (tpl.meals && tpl.meals[d.id] && tpl.meals[d.id].main ? `${d.pill}: ${tpl.meals[d.id].main}` : null))
+          .filter(Boolean);
+
+        const card = document.createElement('div');
+        card.className = 'bg-app-card rounded-xl border border-app-muted p-3 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2.5';
+        card.innerHTML = `
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2">
+              <h3 class="text-xs sm:text-sm font-bold text-slate-900 truncate">${tpl.name}</h3>
+              <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-900 shrink-0">${sampleMeals.length} days</span>
+            </div>
+            <p class="text-[11px] text-slate-700 truncate mt-0.5">
+              ${sampleMeals.length > 0 ? sampleMeals.slice(0, 3).join(' • ') + (sampleMeals.length > 3 ? ' …' : '') : 'Blank week'}
+            </p>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button type="button" data-load-template="${idx}" class="px-2.5 py-1.5 bg-indigo-900 hover:bg-indigo-950 text-white text-xs font-semibold rounded-lg transition">
+              Load into ${getActiveWeekLabel()}
+            </button>
+            <button type="button" data-delete-template="${idx}" class="px-2 py-1.5 bg-app-subcard hover:bg-burgundy-soft text-slate-700 hover:text-burgundy-deep text-xs font-bold rounded-lg transition" title="Delete template">
+              ✕
+            </button>
+          </div>
+        `;
+        listEl.appendChild(card);
+      });
+
+      listEl.querySelectorAll('[data-load-template]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.getAttribute('data-load-template'), 10);
+          const tpl = weekTemplates[idx];
+          if (!tpl || !tpl.meals) return;
+
+          const safePool = mealPool.filter(t => !templateConflictsWithAvoid(t));
+          let replacedAvoidCount = 0;
+
+          days.forEach((d, dIdx) => {
+            const dayData = tpl.meals[d.id]
+              ? { prepTag: 'fresh', leftoverFrom: '', ...tpl.meals[d.id] }
+              : { prepTag: 'fresh', leftoverFrom: '', main: '', veggies: '', bEnabled: false, bAlt: '', xEnabled: false, xAlt: '' };
+            if (templateConflictsWithAvoid(dayData) && safePool.length > 0) {
+              mealState[d.id] = { ...safePool[dIdx % safePool.length] };
+              replacedAvoidCount++;
+            } else {
+              mealState[d.id] = dayData;
+            }
+          });
+
+          saveToStorage();
+          renderDayPills();
+          renderDays();
+
+          if (replacedAvoidCount > 0) {
+            showToast(`Loaded "${tpl.name}" into ${getActiveWeekLabel()} (swapped ${replacedAvoidCount} meal(s) that matched your Avoid List).`);
+          } else {
+            showToast(`Loaded template "${tpl.name}" into ${getActiveWeekLabel()}!`);
+          }
+        });
+      });
+
+      listEl.querySelectorAll('[data-delete-template]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.getAttribute('data-delete-template'), 10);
+          weekTemplates.splice(idx, 1);
+          saveToStorage();
+        });
+      });
+    }
+
+    function resolveStoreForText(text, explicitStore) {
+      if (explicitStore && (stores.includes(explicitStore) || explicitStore === 'Unassigned')) {
+        return explicitStore;
+      }
+      const norm = (text || '').trim().toLowerCase();
+      if (!norm) return 'Unassigned';
+      if (itemStoreOverrides[norm] && (stores.includes(itemStoreOverrides[norm]) || itemStoreOverrides[norm] === 'Unassigned')) {
+        return itemStoreOverrides[norm];
+      }
+      for (const rule of storeRules) {
+        if (rule.keyword && norm.includes(rule.keyword.trim().toLowerCase())) {
+          if (stores.includes(rule.store)) {
+            return rule.store;
+          }
+        }
+      }
+      return 'Unassigned';
+    }
+
+    function buildGroceryItems() {
+      const items = [];
+      days.forEach(d => {
+        const st = mealState[d.id];
+        if (!st) return;
+        const pTag = st.prepTag || 'fresh';
+        const skipMainGrocery = pTag === 'leftovers' || pTag === 'takeout';
+
+        if (!skipMainGrocery && st.main && st.main.trim()) {
+          const txt = st.main.trim();
+          items.push({
+            key: `${activeWeekKey}-${d.id}-main-${txt}`,
+            text: txt,
+            store: resolveStoreForText(txt),
+            tag: `${d.pill} Main`,
+            badgeClass: 'bg-teal-100 text-teal-900',
+            isCustom: false
+          });
+        }
+        if (st.veggies && st.veggies.trim()) {
+          const txt = st.veggies.trim();
+          items.push({
+            key: `${activeWeekKey}-${d.id}-veg-${txt}`,
+            text: txt,
+            store: resolveStoreForText(txt),
+            tag: `${d.pill} Veggies`,
+            badgeClass: 'bg-emerald-100 text-emerald-900',
+            isCustom: false
+          });
+        }
+        if (!skipMainGrocery && st.bEnabled && st.bAlt && st.bAlt.trim()) {
+          const txt = st.bAlt.trim();
+          items.push({
+            key: `${activeWeekKey}-${d.id}-b-${txt}`,
+            text: txt,
+            store: resolveStoreForText(txt),
+            tag: `${d.pill} B Alt`,
+            badgeClass: 'bg-purple-100 text-purple-900',
+            isCustom: false
+          });
+        }
+        if (!skipMainGrocery && st.xEnabled && st.xAlt && st.xAlt.trim()) {
+          const txt = st.xAlt.trim();
+          items.push({
+            key: `${activeWeekKey}-${d.id}-x-${txt}`,
+            text: txt,
+            store: resolveStoreForText(txt),
+            tag: `${d.pill} X Alt`,
+            badgeClass: 'bg-amber-100 text-amber-900',
+            isCustom: false
+          });
+        }
+      });
+
+      customGroceryItems.forEach(custom => {
+        const txt = custom.text.trim();
+        items.push({
+          key: `custom-${custom.id}`,
+          customId: custom.id,
+          text: txt,
+          store: resolveStoreForText(txt, custom.store),
+          tag: 'Extra Item',
+          badgeClass: 'bg-slate-200 text-slate-700',
+          isCustom: true
+        });
+      });
+
+      return items;
+    }
+
+    function buildFormattedMenuSummary() {
+      const lines = [`🍽️ FAMILY DINNER PLAN (${getActiveWeekLabel().toUpperCase()})`];
+      let anyPlanned = false;
+      days.forEach(d => {
+        const st = mealState[d.id];
+        if (!st) return;
+        const hasMain = st.main && st.main.trim();
+        const hasVeg = st.veggies && st.veggies.trim();
+        const hasB = st.bEnabled && st.bAlt && st.bAlt.trim();
+        const hasX = st.xEnabled && st.xAlt && st.xAlt.trim();
+        if (!hasMain && !hasVeg && !hasB && !hasX) return;
+        anyPlanned = true;
+        const tagMeta = getPrepTagMeta(st.prepTag);
+        const fromDayObj = st.leftoverFrom ? days.find(x => x.id === st.leftoverFrom) : null;
+        const tagText = fromDayObj && st.prepTag === 'leftovers' ? `${tagMeta.label} from ${fromDayObj.short}` : tagMeta.label;
+        lines.push('');
+        lines.push(`📅 ${d.name.toUpperCase()} [${tagText}]`);
+        if (hasMain) lines.push(`  • Main (Mama, Pops, Arrw): ${st.main.trim()}`);
+        if (hasVeg) lines.push(`  • Extra Veggies: ${st.veggies.trim()}`);
+        if (hasB) lines.push(`  • B Alt: ${st.bAlt.trim()}`);
+        if (hasX) lines.push(`  • X Alt: ${st.xAlt.trim()}`);
+      });
+
+      if (!anyPlanned) {
+        lines.push('\n(No dinners entered yet — type meals below or tap Load Sample Week!)');
+      }
+      return lines.join('\n');
+    }
+
+    function buildFormattedGroceryText() {
+      const items = buildGroceryItems();
+      if (items.length === 0) {
+        return `🛒 GROCERY LIST BY STORE (${getActiveWeekLabel().toUpperCase()})\n(No items yet!)`;
+      }
+      const lines = [`🛒 FAMILY GROCERY LIST BY STORE (${getActiveWeekLabel().toUpperCase()})`];
+      const orderedStores = [...stores, 'Unassigned'];
+      orderedStores.forEach(stName => {
+        const group = items.filter(i => i.store === stName);
+        if (group.length === 0) return;
+        lines.push('');
+        lines.push(`🏪 ${stName.toUpperCase()} (${group.length})`);
+        group.forEach(item => {
+          const mark = checkedGroceryKeys[item.key] ? '[x]' : '[ ]';
+          lines.push(`  ${mark} ${item.text} (${item.tag})`);
+        });
+      });
+      return lines.join('\n');
+    }
+
+    function renderStoreRulesManager() {
+      const storeBadgesEl = document.getElementById('store-badges-list');
+      if (storeBadgesEl) {
+        storeBadgesEl.innerHTML = '';
+        stores.forEach((stName, idx) => {
+          const span = document.createElement('span');
+          span.className = 'inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-app-card text-slate-900 border border-app-muted';
+          span.innerHTML = `
+            <span>🏪 ${stName}</span>
+            ${
+              stores.length > 1
+                ? `<button type="button" data-remove-store="${idx}" class="text-slate-600 hover:text-burgundy-deep font-bold ml-0.5" title="Remove store">✕</button>`
+                : ''
+            }
+          `;
+          storeBadgesEl.appendChild(span);
+        });
+
+        storeBadgesEl.querySelectorAll('[data-remove-store]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const idx = parseInt(btn.getAttribute('data-remove-store'), 10);
+            const removed = stores[idx];
+            stores.splice(idx, 1);
+            if (activeStoreFilter === removed) activeStoreFilter = 'ALL';
+            saveToStorage();
+          });
+        });
+      }
+
+      const ruleStoreSelect = document.getElementById('new-rule-store-select');
+      const groceryStoreSelect = document.getElementById('new-grocery-store-select');
+      if (ruleStoreSelect) {
+        ruleStoreSelect.innerHTML = stores.map(s => `<option value="${s.replace(/"/g, '&quot;')}">${s}</option>`).join('');
+      }
+      if (groceryStoreSelect) {
+        groceryStoreSelect.innerHTML =
+          `<option value="">Auto-Map Store</option>` +
+          stores.map(s => `<option value="${s.replace(/"/g, '&quot;')}">${s}</option>`).join('') +
+          `<option value="Unassigned">Unassigned</option>`;
+      }
+
+      const rulesChipsEl = document.getElementById('store-rules-chips');
+      if (rulesChipsEl) {
+        rulesChipsEl.innerHTML = '';
+        if (storeRules.length === 0) {
+          rulesChipsEl.innerHTML = `<span class="text-xs text-slate-500 italic">No auto-rules saved yet.</span>`;
+        } else {
+          storeRules.forEach((rule, idx) => {
+            const chip = document.createElement('span');
+            chip.className = 'inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-medium bg-app-input text-slate-800 border border-app-muted';
+            chip.innerHTML = `
+              <span>"${rule.keyword}" → <strong class="text-teal-900">${rule.store}</strong></span>
+              <button type="button" data-remove-rule="${idx}" class="text-slate-500 hover:text-burgundy-deep font-bold ml-0.5">✕</button>
+            `;
+            rulesChipsEl.appendChild(chip);
+          });
+
+          rulesChipsEl.querySelectorAll('[data-remove-rule]').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const idx = parseInt(btn.getAttribute('data-remove-rule'), 10);
+              storeRules.splice(idx, 1);
+              saveToStorage();
+            });
+          });
+        }
+      }
+    }
+
+    function renderGroceryAndShareDrawer() {
+      renderStoreRulesManager();
+
+      const items = buildGroceryItems();
+      const countBadge = document.getElementById('grocery-count-badge');
+      if (countBadge) {
+        const uncheckedCount = items.filter(i => !checkedGroceryKeys[i.key]).length;
+        countBadge.textContent = uncheckedCount;
+      }
+
+      const filterTabsEl = document.getElementById('store-filter-tabs');
+      if (filterTabsEl) {
+        filterTabsEl.innerHTML = '';
+        const tabOptions = ['ALL', ...stores, 'Unassigned'];
+        tabOptions.forEach(tabName => {
+          const count = tabName === 'ALL' ? items.length : items.filter(i => i.store === tabName).length;
+          if (tabName === 'Unassigned' && count === 0 && activeStoreFilter !== 'Unassigned') return;
+          const isSelected = activeStoreFilter === tabName;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = `px-2.5 py-1 rounded-full text-xs font-semibold transition flex items-center gap-1 shrink-0 ${
+            isSelected
+              ? 'bg-teal-800 text-white shadow-sm'
+              : 'bg-app-input text-slate-800 border border-app-muted hover:bg-white'
+          }`;
+          const label = tabName === 'ALL' ? 'All Stores' : `🏪 ${tabName}`;
+          btn.innerHTML = `<span>${label}</span><span class="text-[10px] px-1.5 py-0.2 rounded-full ${isSelected ? 'bg-teal-950 text-teal-100' : 'bg-app-subcard text-slate-800'}">${count}</span>`;
+          btn.addEventListener('click', () => {
+            activeStoreFilter = tabName;
+            renderGroceryAndShareDrawer();
+          });
+          filterTabsEl.appendChild(btn);
+        });
+      }
+
+      const listContainer = document.getElementById('grocery-checklist-container');
+      if (listContainer) {
+        listContainer.innerHTML = '';
+        const filteredItems = activeStoreFilter === 'ALL' ? items : items.filter(i => i.store === activeStoreFilter);
+
+        if (filteredItems.length === 0) {
+          listContainer.innerHTML = `<p class="text-xs text-slate-600 italic py-2">No grocery items in this store view for ${getActiveWeekLabel()} yet. Plan dinners below (or click Load Sample Week) to populate and map your items!</p>`;
+        } else {
+          const storeGroups = activeStoreFilter === 'ALL' ? [...stores, 'Unassigned'] : [activeStoreFilter];
+
+          storeGroups.forEach(stName => {
+            const groupItems = filteredItems.filter(i => i.store === stName);
+            if (groupItems.length === 0) return;
+
+            const groupWrap = document.createElement('div');
+            groupWrap.className = 'bg-app-surface rounded-xl border border-app-muted p-2.5';
+            groupWrap.innerHTML = `
+              <div class="flex items-center justify-between mb-2 pb-1 border-b border-app-subtle">
+                <span class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                  <span>🏪 ${stName}</span>
+                  <span class="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-teal-900/15 text-teal-950">${groupItems.length}</span>
+                </span>
+              </div>
+              <div class="space-y-1.5" data-store-group-list="${stName}"></div>
+            `;
+            const groupListEl = groupWrap.querySelector(`[data-store-group-list="${stName}"]`);
+
+            groupItems.forEach(item => {
+              const isChecked = !!checkedGroceryKeys[item.key];
+              const row = document.createElement('div');
+              row.className = `flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 p-1.5 rounded-lg border text-xs transition ${
+                isChecked ? 'bg-app-subcard border-app-subtle text-slate-500' : 'bg-app-input border-app-subtle text-slate-800'
+              }`;
+
+              const storeOptionsHtml = [...stores, 'Unassigned']
+                .map(
+                  s =>
+                    `<option value="${s.replace(/"/g, '&quot;')}" ${item.store === s ? 'selected' : ''}>🏪 ${s}</option>`
+                )
+                .join('');
+
+              row.innerHTML = `
+                <label class="flex items-center gap-2 cursor-pointer flex-1 min-w-[160px] select-none">
+                  <input type="checkbox" data-grocery-key="${item.key.replace(/"/g, '&quot;')}" ${isChecked ? 'checked' : ''} class="w-4 h-4 rounded text-teal-700 border-slate-400 focus:ring-teal-600">
+                  <span class="${isChecked ? 'line-through' : 'font-medium'}">${item.text}</span>
+                </label>
+                <div class="flex items-center gap-1.5 shrink-0 ml-auto">
+                  <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full ${item.badgeClass}">${item.tag}</span>
+                  <select data-assign-store-text="${item.text.replace(/"/g, '&quot;')}" data-assign-custom-id="${item.isCustom ? item.customId : ''}" title="Map item to store" class="text-[11px] font-semibold px-2 py-0.5 rounded-md border border-app-muted bg-app-surface text-slate-900 focus:outline-none focus:border-teal-700">
+                    ${storeOptionsHtml}
+                  </select>
+                  ${
+                    item.isCustom
+                      ? `<button type="button" data-remove-custom-grocery="${item.customId}" class="text-slate-500 hover:text-burgundy-deep font-bold px-1" title="Remove">✕</button>`
+                      : ''
+                  }
+                </div>
+              `;
+              groupListEl.appendChild(row);
+            });
+
+            listContainer.appendChild(groupWrap);
+          });
+
+          listContainer.querySelectorAll('[data-grocery-key]').forEach(chk => {
+            chk.addEventListener('change', (e) => {
+              const k = chk.getAttribute('data-grocery-key');
+              if (e.target.checked) {
+                checkedGroceryKeys[k] = true;
+              } else {
+                delete checkedGroceryKeys[k];
+              }
+              saveToStorage();
+            });
+          });
+
+          listContainer.querySelectorAll('[data-assign-store-text]').forEach(sel => {
+            sel.addEventListener('change', (e) => {
+              const chosenStore = e.target.value;
+              const itemText = sel.getAttribute('data-assign-store-text');
+              const customId = sel.getAttribute('data-assign-custom-id');
+              if (itemText) {
+                itemStoreOverrides[itemText.trim().toLowerCase()] = chosenStore;
+              }
+              if (customId) {
+                const found = customGroceryItems.find(c => String(c.id) === String(customId));
+                if (found) found.store = chosenStore;
+              }
+              saveToStorage();
+            });
+          });
+
+          listContainer.querySelectorAll('[data-remove-custom-grocery]').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const id = btn.getAttribute('data-remove-custom-grocery');
+              customGroceryItems = customGroceryItems.filter(c => String(c.id) !== String(id));
+              saveToStorage();
+            });
+          });
+        }
+      }
+
+      const summaryTextarea = document.getElementById('share-summary-textarea');
+      if (summaryTextarea) {
+        summaryTextarea.value =
+          sharePreviewMode === 'stores' ? buildFormattedGroceryText() : buildFormattedMenuSummary();
+      }
+    }
+
+    function copyTextToClipboard(text, label, onSuccess) {
+      const feedbackEl = document.getElementById('copy-feedback-msg');
+      const showCopied = () => {
+        if (feedbackEl) {
+          feedbackEl.textContent = `✓ Copied ${label}!`;
+          setTimeout(() => {
+            feedbackEl.textContent = '';
+          }, 2200);
+        }
+        if (onSuccess) onSuccess();
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(showCopied).catch(() => {
+          fallbackCopy(text, showCopied);
+        });
+      } else {
+        fallbackCopy(text, showCopied);
+      }
+    }
+
+    function fallbackCopy(text, callback) {
+      const temp = document.createElement('textarea');
+      temp.value = text;
+      temp.style.position = 'fixed';
+      temp.style.opacity = '0';
+      document.body.appendChild(temp);
+      temp.select();
+      try {
+        document.execCommand('copy');
+      } catch (e) {
+        // Ignore
+      }
+      document.body.removeChild(temp);
+      if (callback) callback();
+    }
+
+    function renderPreferencesDrawer() {
+      const avoidBadge = document.getElementById('avoid-count-badge');
+      if (avoidBadge) {
+        avoidBadge.textContent = avoidList.length;
+      }
+
+      const avoidContainer = document.getElementById('avoid-chips-container');
+      avoidContainer.innerHTML = '';
+      if (avoidList.length === 0) {
+        avoidContainer.innerHTML = `<span class="text-xs text-slate-600 italic">No avoided foods right now.</span>`;
+      } else {
+        avoidList.forEach((item, idx) => {
+          const badge = document.createElement('span');
+          badge.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-app-input text-burgundy-deep border border-burgundy-soft shadow-sm';
+          badge.innerHTML = `
+            <span>🚫 ${item}</span>
+            <button type="button" data-remove-avoid="${idx}" class="text-burgundy-muted hover:text-burgundy-deep font-bold ml-0.5" title="Remove">✕</button>
+          `;
+          avoidContainer.appendChild(badge);
+        });
+      }
+
+      avoidContainer.querySelectorAll('[data-remove-avoid]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const i = parseInt(btn.getAttribute('data-remove-avoid'), 10);
+          avoidList.splice(i, 1);
+          saveToStorage();
+          renderPreferencesDrawer();
+          renderDays();
+        });
+      });
+
+      const favListEl = document.getElementById('fav-manager-list');
+      favListEl.innerHTML = '';
+      const catLabels = {
+        main: { label: 'Main Dinner' },
+        veggies: { label: 'Extra Veggies' },
+        bAlt: { label: 'B Alt' },
+        xAlt: { label: 'X Alt' }
+      };
+
+      Object.keys(catLabels).forEach(catKey => {
+        const meta = catLabels[catKey];
+        const row = document.createElement('div');
+        row.className = 'flex flex-wrap items-center gap-1.5';
+        const labelSpan = document.createElement('span');
+        labelSpan.className = 'font-bold text-slate-800 text-[11px] w-24 shrink-0';
+        labelSpan.textContent = meta.label + ':';
+        row.appendChild(labelSpan);
+
+        const chipsWrap = document.createElement('div');
+        chipsWrap.className = 'flex flex-wrap gap-1 flex-1';
+        (favorites[catKey] || []).forEach((chipText, chipIdx) => {
+          const isAvoided = textHasAvoidedItem(chipText);
+          const chip = document.createElement('span');
+          chip.className = `inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-medium border ${
+            isAvoided
+              ? 'bg-burgundy-soft text-burgundy-muted line-through border-burgundy-soft'
+              : 'bg-app-input text-slate-800 border-app-muted'
+          }`;
+          chip.innerHTML = `
+            <span>${chipText}</span>
+            <button type="button" data-remove-fav-cat="${catKey}" data-remove-fav-idx="${chipIdx}" class="text-slate-500 hover:text-burgundy-deep font-bold">✕</button>
+          `;
+          chipsWrap.appendChild(chip);
+        });
+        row.appendChild(chipsWrap);
+        favListEl.appendChild(row);
+      });
+
+      favListEl.querySelectorAll('[data-remove-fav-cat]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const cat = btn.getAttribute('data-remove-fav-cat');
+          const idx = parseInt(btn.getAttribute('data-remove-fav-idx'), 10);
+          favorites[cat].splice(idx, 1);
+          saveToStorage();
+          renderPreferencesDrawer();
+          renderDays();
+        });
+      });
+    }
+
+    const grid = document.getElementById('calendar-grid');
+    const pillsContainer = document.getElementById('day-pills');
+
+    function renderDayPills() {
+      pillsContainer.innerHTML = '';
+      days.forEach(day => {
+        const hasMeal = mealState[day.id] && mealState[day.id].main.trim().length > 0;
+        const isSelected = activeDayId === day.id;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = `px-3 py-1.5 rounded-full text-xs font-bold transition flex items-center gap-1 shrink-0 ${
+          isSelected
+            ? 'bg-slate-800 text-white shadow-sm'
+            : 'bg-app-surface text-slate-800 border border-app-muted hover:bg-app-card'
+        }`;
+        btn.innerHTML = `
+          <span>${day.pill}</span>
+          ${hasMeal ? `<span class="w-1.5 h-1.5 rounded-full ${isSelected ? 'bg-teal-300' : 'bg-teal-700'}"></span>` : ''}
+        `;
+        btn.addEventListener('click', () => {
+          activeDayId = day.id;
+          renderDayPills();
+          if (viewMode === 'day') {
+            renderDays();
+          } else {
+            const cardEl = document.getElementById(`card-${day.id}`);
+            if (cardEl) {
+              cardEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              cardEl.classList.add('ring-2', 'ring-teal-700');
+              setTimeout(() => cardEl.classList.remove('ring-2', 'ring-teal-700'), 1200);
+            }
+          }
+        });
+        pillsContainer.appendChild(btn);
+      });
+    }
+
+    function updateViewModeButtons() {
+      const weekBtn = document.getElementById('view-week-btn');
+      const dayBtn = document.getElementById('view-day-btn');
+      const exportFooter = document.getElementById('bottom-export-footer');
+      const fridgeSection = document.getElementById('fridge-view-section');
+
+      if (viewMode === 'week') {
+        weekBtn.className = 'px-3 py-1.5 rounded-md text-xs font-semibold transition bg-slate-800 text-white shadow-sm';
+        dayBtn.className = 'px-3 py-1.5 rounded-md text-xs font-semibold transition text-slate-800 hover:text-slate-950';
+        grid.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4';
+        if (exportFooter) exportFooter.classList.remove('hidden');
+      } else {
+        dayBtn.className = 'px-3 py-1.5 rounded-md text-xs font-semibold transition bg-slate-800 text-white shadow-sm';
+        weekBtn.className = 'px-3 py-1.5 rounded-md text-xs font-semibold transition text-slate-800 hover:text-slate-950';
+        grid.className = 'max-w-md mx-auto';
+        if (exportFooter) exportFooter.classList.add('hidden');
+        if (fridgeSection) fridgeSection.classList.add('hidden');
+      }
+    }
+
+    function buildQuickChipsHTML(dayId, fieldKey, pillColorClass) {
+      const allChips = favorites[fieldKey] || [];
+      const validChips = allChips.filter(c => !textHasAvoidedItem(c));
+      if (validChips.length === 0) return '';
+      const isFocused = activeInputInfo && activeInputInfo.dayId === dayId && activeInputInfo.field === fieldKey;
+      return `
+        <div id="${dayId}-chips-${fieldKey}" class="${isFocused ? 'flex' : 'hidden'} flex-wrap gap-1 mt-1.5 pt-1">
+          <span class="text-[10px] font-semibold text-slate-600 self-center mr-0.5">Quick pick:</span>
+          ${validChips
+            .map(
+              chip => `
+            <button type="button" data-chip-day="${dayId}" data-chip-field="${fieldKey}" data-chip-val="${chip.replace(/"/g, '&quot;')}" class="text-[11px] px-2 py-0.5 rounded-full border transition ${pillColorClass}">
+              + ${chip}
+            </button>
+          `
+            )
+            .join('')}
+        </div>
+      `;
+    }
+
+    function renderDays() {
+      grid.innerHTML = '';
+      const visibleDays = viewMode === 'week' ? days : days.filter(d => d.id === activeDayId);
+
+      visibleDays.forEach(day => {
+        const dState = mealState[day.id];
+        const currentPrepTag = dState.prepTag || 'fresh';
+        const currentLeftoverFrom = dState.leftoverFrom || '';
+        const tagMeta = getPrepTagMeta(currentPrepTag);
+
+        const hasAvoidWarning =
+          textHasAvoidedItem(dState.main) ||
+          textHasAvoidedItem(dState.veggies) ||
+          (dState.bEnabled && textHasAvoidedItem(dState.bAlt)) ||
+          (dState.xEnabled && textHasAvoidedItem(dState.xAlt));
+
+        const prepOptionsHtml = prepTags
+          .map(
+            t =>
+              `<option value="${t.id}" ${currentPrepTag === t.id ? 'selected' : ''}>${t.label}</option>`
+          )
+          .join('');
+
+        // Always list Mon-Sun in fixed order for Leftovers selector
+        const leftoverOptionsHtml =
+          `<option value="">🍱 Leftovers from...</option>` +
+          days
+            .map(
+              d =>
+                `<option value="${d.id}" ${currentLeftoverFrom === d.id ? 'selected' : ''}>From ${d.short}</option>`
+            )
+            .join('');
+
+        const card = document.createElement('div');
+        card.id = `card-${day.id}`;
+        card.className = 'bg-app-card rounded-xl shadow-sm border border-app-muted p-4 flex flex-col justify-between hover:shadow-md transition';
+
+        card.innerHTML = `
+          <div>
+            <!-- Card Header -->
+            <div class="flex items-center justify-between pb-2.5 border-b border-app-subtle mb-2.5">
+              <div class="flex items-center gap-2">
+                <h2 class="font-bold text-slate-900 text-base">${day.name}</h2>
+                <button type="button" data-shuffle-day="${day.id}" title="Suggest a safe meal (skips Avoid List)" class="text-[11px] font-semibold px-2 py-0.5 bg-app-subcard hover:bg-app-surface text-slate-800 border border-app-muted rounded-full transition">
+                  ↻ Suggest
+                </button>
+              </div>
+              ${viewMode === 'day' ? `
+                <div class="flex items-center gap-1">
+                  <button type="button" data-nav="prev" class="px-2 py-1 text-xs font-semibold bg-app-subcard hover:bg-app-surface rounded text-slate-800">← Prev</button>
+                  <button type="button" data-nav="next" class="px-2 py-1 text-xs font-semibold bg-app-subcard hover:bg-app-surface rounded text-slate-800">Next →</button>
+                </div>
+              ` : ''}
+            </div>
+
+            <!-- Prep Style Dropdown + Leftovers Source Day Dropdown (Always Mon-Sun) -->
+            <div class="mb-3 grid grid-cols-2 gap-1.5">
+              <select id="${day.id}-prep-tag" aria-label="${day.name} prep style" class="w-full text-[11px] font-semibold px-2 py-1 rounded-lg border cursor-pointer focus:outline-none ${tagMeta.badgeClass}">
+                ${prepOptionsHtml}
+              </select>
+              <select id="${day.id}-leftover-from" aria-label="${day.name} leftovers source day" class="w-full text-[11px] font-semibold px-2 py-1 rounded-lg border cursor-pointer focus:outline-none ${
+                currentLeftoverFrom
+                  ? 'bg-teal-100 text-teal-950 border-teal-400'
+                  : 'bg-app-surface text-slate-800 border-app-muted'
+              }">
+                ${leftoverOptionsHtml}
+              </select>
+            </div>
+
+            <!-- Avoid Notice Banner (Burgundy / Maroon instead of bright red) -->
+            <div id="${day.id}-avoid-warn" class="${hasAvoidWarning ? 'mb-3' : 'hidden'} bg-burgundy-soft border border-burgundy-soft text-burgundy-deep px-2.5 py-1.5 rounded-lg text-[11px] font-semibold flex items-center justify-between">
+              <span>🚫 Note: Contains an item on your Avoid List</span>
+            </div>
+
+            <!-- Main Dinner (Mama, Pops, Arrw) -->
+            <div class="mb-3">
+              <label for="${day.id}-main" class="block text-xs font-semibold text-slate-800 mb-1 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-teal-700"></span>
+                Main Dinner (Mama, Pops, Arrw)
+              </label>
+              <textarea id="${day.id}-main" rows="2" placeholder="Tap for quick-picks or type dinner..." class="w-full text-xs sm:text-sm p-2 rounded-lg border border-app-muted bg-app-input focus:outline-none focus:ring-2 focus:ring-teal-700/20 focus:border-teal-700 resize-none">${dState.main}</textarea>
+              ${buildQuickChipsHTML(day.id, 'main', 'bg-app-input hover:bg-teal-50 text-teal-950 border-app-muted')}
+            </div>
+
+            <!-- Extra Veggies -->
+            <div class="mb-3">
+              <label for="${day.id}-veggies" class="block text-xs font-semibold text-emerald-950 mb-1 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                Extra Veggies
+              </label>
+              <input type="text" id="${day.id}-veggies" value="${dState.veggies.replace(/"/g, '&quot;')}" placeholder="Tap for quick veggies or type..." class="w-full text-xs sm:text-sm p-2 rounded-lg border border-app-muted focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-700 bg-app-input">
+              ${buildQuickChipsHTML(day.id, 'veggies', 'bg-app-input hover:bg-emerald-50 text-emerald-950 border-app-muted')}
+            </div>
+
+            <!-- Compact Alts Checkbox Bar: "Alts: [ ] B   [ ] X" (dropped age labels) -->
+            <div class="pt-2.5 border-t border-app-subtle flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-800">Alts:</span>
+              <div class="flex items-center gap-4">
+                <label for="${day.id}-check-b" class="inline-flex items-center gap-1.5 cursor-pointer select-none px-2 py-1 rounded-md hover:bg-purple-200/50 transition">
+                  <input type="checkbox" id="${day.id}-check-b" ${dState.bEnabled ? 'checked' : ''} class="w-4 h-4 rounded text-purple-700 border-slate-400 focus:ring-purple-600">
+                  <span class="text-xs font-bold text-purple-950">B</span>
+                </label>
+
+                <label for="${day.id}-check-x" class="inline-flex items-center gap-1.5 cursor-pointer select-none px-2 py-1 rounded-md hover:bg-amber-200/50 transition">
+                  <input type="checkbox" id="${day.id}-check-x" ${dState.xEnabled ? 'checked' : ''} class="w-4 h-4 rounded text-amber-700 border-slate-400 focus:ring-amber-600">
+                  <span class="text-xs font-bold text-amber-950">X</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- B Alt Expandable Box (Hidden unless checked) -->
+            <div id="${day.id}-b-wrap" class="${dState.bEnabled ? 'mt-2.5' : 'hidden'} bg-purple-900/10 p-2.5 rounded-lg border border-purple-400/50 transition-all">
+              <label for="${day.id}-b" class="block text-xs font-semibold text-purple-950 mb-1 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-purple-700"></span>
+                B Alt
+              </label>
+              <input type="text" id="${day.id}-b" value="${dState.bAlt.replace(/"/g, '&quot;')}" placeholder="Tap for B's favorites or type..." class="w-full text-xs sm:text-sm p-1.5 rounded-md border border-purple-300 bg-app-input focus:outline-none focus:ring-2 focus:ring-purple-500/20 focus:border-purple-700">
+              ${buildQuickChipsHTML(day.id, 'bAlt', 'bg-app-input hover:bg-purple-100 text-purple-950 border-purple-300')}
+            </div>
+
+            <!-- X Alt Expandable Box (Hidden unless checked) -->
+            <div id="${day.id}-x-wrap" class="${dState.xEnabled ? 'mt-2.5' : 'hidden'} bg-amber-900/10 p-2.5 rounded-lg border border-amber-500/40 transition-all">
+              <label for="${day.id}-x" class="block text-xs font-semibold text-amber-950 mb-1 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-amber-600"></span>
+                X Alt
+              </label>
+              <input type="text" id="${day.id}-x" value="${dState.xAlt.replace(/"/g, '&quot;')}" placeholder="Tap for X's favorites or type..." class="w-full text-xs sm:text-sm p-1.5 rounded-md border border-amber-300 bg-app-input focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-700">
+              ${buildQuickChipsHTML(day.id, 'xAlt', 'bg-app-input hover:bg-amber-100 text-amber-950 border-amber-300')}
+            </div>
+          </div>
+        `;
+
+        grid.appendChild(card);
+
+        const prepSelect = document.getElementById(`${day.id}-prep-tag`);
+        const leftoverSelect = document.getElementById(`${day.id}-leftover-from`);
+        const mainInput = document.getElementById(`${day.id}-main`);
+        const vegInput = document.getElementById(`${day.id}-veggies`);
+        const checkB = document.getElementById(`${day.id}-check-b`);
+        const checkX = document.getElementById(`${day.id}-check-x`);
+        const bWrap = document.getElementById(`${day.id}-b-wrap`);
+        const xWrap = document.getElementById(`${day.id}-x-wrap`);
+        const bInput = document.getElementById(`${day.id}-b`);
+        const xInput = document.getElementById(`${day.id}-x`);
+        const warnBanner = document.getElementById(`${day.id}-avoid-warn`);
+
+        prepSelect.addEventListener('change', (e) => {
+          const newTag = e.target.value;
+          mealState[day.id].prepTag = newTag;
+          if (newTag !== 'leftovers') {
+            mealState[day.id].leftoverFrom = '';
+            leftoverSelect.value = '';
+            leftoverSelect.className = 'w-full text-[11px] font-semibold px-2 py-1 rounded-lg border cursor-pointer focus:outline-none bg-app-surface text-slate-800 border-app-muted';
+          }
+          const newMeta = getPrepTagMeta(newTag);
+          prepSelect.className = `w-full text-[11px] font-semibold px-2 py-1 rounded-lg border cursor-pointer focus:outline-none ${newMeta.badgeClass}`;
+          saveToStorage();
+        });
+
+        // Leftovers from Day selector (Always Mon-Sun order)
+        leftoverSelect.addEventListener('change', (e) => {
+          const sourceDayId = e.target.value;
+          mealState[day.id].leftoverFrom = sourceDayId;
+
+          if (!sourceDayId) {
+            leftoverSelect.className = 'w-full text-[11px] font-semibold px-2 py-1 rounded-lg border cursor-pointer focus:outline-none bg-app-surface text-slate-800 border-app-muted';
+            saveToStorage();
+            return;
+          }
+
+          const sourceDayObj = days.find(d => d.id === sourceDayId);
+          const sourceState = mealState[sourceDayId];
+          mealState[day.id].prepTag = 'leftovers';
+
+          if (sourceState && sourceState.main && sourceState.main.trim()) {
+            const cleanMain = sourceState.main.replace(/^Leftovers\s*(\([^)]*\))?:\s*/i, '').trim();
+            mealState[day.id].main = `Leftovers (${sourceDayObj.short}): ${cleanMain}`;
+            if (!mealState[day.id].veggies && sourceState.veggies) {
+              mealState[day.id].veggies = sourceState.veggies;
+            }
+            if (sourceState.bEnabled) {
+              mealState[day.id].bEnabled = true;
+              mealState[day.id].bAlt = sourceState.bAlt || '';
+            }
+            if (sourceState.xEnabled) {
+              mealState[day.id].xEnabled = true;
+              mealState[day.id].xAlt = sourceState.xAlt || '';
+            }
+            showToast(`Copied ${sourceDayObj.name}'s meal into ${day.name} as Leftovers!`);
+          } else {
+            mealState[day.id].main = `Leftovers from ${sourceDayObj.name}`;
+            showToast(`Marked ${day.name} as Leftovers from ${sourceDayObj.name}!`);
+          }
+
+          saveToStorage();
+          renderDayPills();
+          renderDays();
+        });
+
+        function checkDayAvoidWarning() {
+          const st = mealState[day.id];
+          const conflict =
+            textHasAvoidedItem(st.main) ||
+            textHasAvoidedItem(st.veggies) ||
+            (st.bEnabled && textHasAvoidedItem(st.bAlt)) ||
+            (st.xEnabled && textHasAvoidedItem(st.xAlt));
+          if (warnBanner) {
+            if (conflict) {
+              warnBanner.classList.remove('hidden');
+              warnBanner.classList.add('mb-3');
+            } else {
+              warnBanner.classList.add('hidden');
+              warnBanner.classList.remove('mb-3');
+            }
+          }
+        }
+
+        function showChipsFor(fieldKey) {
+          activeInputInfo = { dayId: day.id, field: fieldKey };
+          document.querySelectorAll('[id*="-chips-"]').forEach(el => {
+            el.classList.add('hidden');
+            el.classList.remove('flex');
+          });
+          const target = document.getElementById(`${day.id}-chips-${fieldKey}`);
+          if (target) {
+            target.classList.remove('hidden');
+            target.classList.add('flex');
+          }
+        }
+
+        mainInput.addEventListener('focus', () => showChipsFor('main'));
+        vegInput.addEventListener('focus', () => showChipsFor('veggies'));
+        bInput.addEventListener('focus', () => showChipsFor('bAlt'));
+        xInput.addEventListener('focus', () => showChipsFor('xAlt'));
+
+        mainInput.addEventListener('input', (e) => {
+          mealState[day.id].main = e.target.value;
+          saveToStorage();
+          renderDayPills();
+          checkDayAvoidWarning();
+        });
+
+        vegInput.addEventListener('input', (e) => {
+          mealState[day.id].veggies = e.target.value;
+          saveToStorage();
+          checkDayAvoidWarning();
+        });
+
+        checkB.addEventListener('change', (e) => {
+          mealState[day.id].bEnabled = e.target.checked;
+          if (e.target.checked) {
+            bWrap.classList.remove('hidden');
+            bWrap.classList.add('mt-2.5');
+            bInput.focus();
+          } else {
+            bWrap.classList.add('hidden');
+            bWrap.classList.remove('mt-2.5');
+          }
+          saveToStorage();
+          checkDayAvoidWarning();
+        });
+
+        checkX.addEventListener('change', (e) => {
+          mealState[day.id].xEnabled = e.target.checked;
+          if (e.target.checked) {
+            xWrap.classList.remove('hidden');
+            xWrap.classList.add('mt-2.5');
+            xInput.focus();
+          } else {
+            xWrap.classList.add('hidden');
+            xWrap.classList.remove('mt-2.5');
+          }
+          saveToStorage();
+          checkDayAvoidWarning();
+        });
+
+        bInput.addEventListener('input', (e) => {
+          mealState[day.id].bAlt = e.target.value;
+          saveToStorage();
+          checkDayAvoidWarning();
+        });
+
+        xInput.addEventListener('input', (e) => {
+          mealState[day.id].xAlt = e.target.value;
+          saveToStorage();
+          checkDayAvoidWarning();
+        });
+
+        card.querySelectorAll('[data-chip-field]').forEach(chipBtn => {
+          chipBtn.addEventListener('click', () => {
+            const field = chipBtn.getAttribute('data-chip-field');
+            const val = chipBtn.getAttribute('data-chip-val');
+            mealState[day.id][field] = val;
+            if (field === 'main') mainInput.value = val;
+            if (field === 'veggies') vegInput.value = val;
+            if (field === 'bAlt') bInput.value = val;
+            if (field === 'xAlt') xInput.value = val;
+            saveToStorage();
+            renderDayPills();
+            checkDayAvoidWarning();
+          });
+        });
+
+        const shuffleBtn = card.querySelector(`[data-shuffle-day="${day.id}"]`);
+        if (shuffleBtn) {
+          shuffleBtn.addEventListener('click', () => {
+            const safePool = mealPool.filter(t => !templateConflictsWithAvoid(t));
+            if (safePool.length === 0) {
+              showToast('All sample meals matched your Avoid List! Try removing a filter.');
+              return;
+            }
+            const pick = safePool[poolOffset % safePool.length];
+            poolOffset++;
+            mealState[day.id] = { prepTag: 'fresh', leftoverFrom: '', ...pick };
+            saveToStorage();
+            renderDayPills();
+            renderDays();
+          });
+        }
+
+        const prevBtn = card.querySelector('[data-nav="prev"]');
+        const nextBtn = card.querySelector('[data-nav="next"]');
+        if (prevBtn && nextBtn) {
+          const currentIndex = days.findIndex(d => d.id === day.id);
+          prevBtn.addEventListener('click', () => {
+            const nextIdx = (currentIndex - 1 + days.length) % days.length;
+            activeDayId = days[nextIdx].id;
+            renderDayPills();
+            renderDays();
+          });
+          nextBtn.addEventListener('click', () => {
+            const nextIdx = (currentIndex + 1) % days.length;
+            activeDayId = days[nextIdx].id;
+            renderDayPills();
+            renderDays();
+          });
+        }
+      });
+    }
+
+    // Drawer Toggles (Notes, Templates, Grocery, Preferences)
+    const notesDrawerEl = document.getElementById('notes-drawer');
+    const templatesDrawerEl = document.getElementById('templates-drawer');
+    const drawerEl = document.getElementById('preferences-drawer');
+    const groceryDrawerEl = document.getElementById('grocery-drawer');
+
+    document.getElementById('toggle-notes-btn').addEventListener('click', () => {
+      notesDrawerEl.classList.toggle('hidden');
+      if (!notesDrawerEl.classList.contains('hidden')) {
+        templatesDrawerEl.classList.add('hidden');
+        drawerEl.classList.add('hidden');
+        groceryDrawerEl.classList.add('hidden');
+        document.getElementById('brain-dump-textarea').focus();
+      }
+    });
+
+    document.getElementById('brain-dump-textarea').addEventListener('input', (e) => {
+      brainDumpNotes = e.target.value;
+      saveToStorage();
+    });
+
+    document.getElementById('toggle-templates-btn').addEventListener('click', () => {
+      templatesDrawerEl.classList.toggle('hidden');
+      if (!templatesDrawerEl.classList.contains('hidden')) {
+        notesDrawerEl.classList.add('hidden');
+        drawerEl.classList.add('hidden');
+        groceryDrawerEl.classList.add('hidden');
+        renderTemplatesDrawer();
+      }
+    });
+
+    document.getElementById('toggle-drawer-btn').addEventListener('click', () => {
+      drawerEl.classList.toggle('hidden');
+      if (!drawerEl.classList.contains('hidden')) {
+        notesDrawerEl.classList.add('hidden');
+        groceryDrawerEl.classList.add('hidden');
+        templatesDrawerEl.classList.add('hidden');
+      }
+    });
+
+    document.getElementById('toggle-grocery-btn').addEventListener('click', () => {
+      groceryDrawerEl.classList.toggle('hidden');
+      if (!groceryDrawerEl.classList.contains('hidden')) {
+        notesDrawerEl.classList.add('hidden');
+        drawerEl.classList.add('hidden');
+        templatesDrawerEl.classList.add('hidden');
+        renderGroceryAndShareDrawer();
+      }
+    });
+
+    // Multi-Week Tab Switching & Actions
+    function switchWeek(targetKey) {
+      if (activeWeekKey === targetKey) return;
+      weeksData[activeWeekKey] = mealState;
+      activeWeekKey = targetKey;
+      mealState = weeksData[activeWeekKey];
+      saveToStorage();
+      renderDayPills();
+      renderDays();
+    }
+
+    document.getElementById('week-tab-this').addEventListener('click', () => switchWeek('thisWeek'));
+    document.getElementById('week-tab-next').addEventListener('click', () => switchWeek('nextWeek'));
+
+    document.getElementById('copy-this-to-next-btn').addEventListener('click', () => {
+      weeksData.nextWeek = JSON.parse(JSON.stringify(weeksData.thisWeek));
+      activeWeekKey = 'nextWeek';
+      mealState = weeksData.nextWeek;
+      saveToStorage();
+      renderDayPills();
+      renderDays();
+      showToast('Copied This Week into Next Week and switched to Next Week!');
+    });
+
+    document.getElementById('promote-next-to-this-btn').addEventListener('click', () => {
+      weeksData.thisWeek = JSON.parse(JSON.stringify(weeksData.nextWeek));
+      weeksData.nextWeek = getEmptyMealState();
+      activeWeekKey = 'thisWeek';
+      mealState = weeksData.thisWeek;
+      saveToStorage();
+      renderDayPills();
+      renderDays();
+      showToast('Rolled Next Week into This Week (and cleared Next Week for fresh planning)!');
+    });
+
+    // Save Current Week as Template
+    const newTemplateNameInput = document.getElementById('new-template-name-input');
+    function saveCurrentWeekAsTemplate() {
+      const nameVal = newTemplateNameInput.value.trim();
+      if (!nameVal) {
+        showToast('Please enter a name for your week template first!');
+        newTemplateNameInput.focus();
+        return;
+      }
+      const snapshot = JSON.parse(JSON.stringify(mealState));
+      weekTemplates.unshift({
+        id: 'tpl-' + Date.now(),
+        name: nameVal,
+        meals: snapshot
+      });
+      newTemplateNameInput.value = '';
+      saveToStorage();
+      showToast(`Saved "${nameVal}" to your Week Templates!`);
+    }
+    document.getElementById('save-template-btn').addEventListener('click', saveCurrentWeekAsTemplate);
+    newTemplateNameInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        saveCurrentWeekAsTemplate();
+      }
+    });
+
+    // Toggle Store Rules Panel inside Grocery Drawer
+    const storeRulesPanel = document.getElementById('store-rules-panel');
+    document.getElementById('toggle-store-rules-btn').addEventListener('click', () => {
+      storeRulesPanel.classList.toggle('hidden');
+    });
+
+    // Add Store
+    const newStoreNameInput = document.getElementById('new-store-name-input');
+    function addNewStore() {
+      const val = newStoreNameInput.value.trim();
+      if (!val) return;
+      if (!stores.includes(val)) {
+        stores.push(val);
+        saveToStorage();
+      }
+      newStoreNameInput.value = '';
+    }
+    document.getElementById('add-store-btn').addEventListener('click', addNewStore);
+    newStoreNameInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addNewStore();
+      }
+    });
+
+    // Add Keyword -> Store Rule
+    const newRuleKeywordInput = document.getElementById('new-rule-keyword-input');
+    const newRuleStoreSelect = document.getElementById('new-rule-store-select');
+    function addNewStoreRule() {
+      const kw = newRuleKeywordInput.value.trim().toLowerCase();
+      const st = newRuleStoreSelect.value;
+      if (!kw || !st) return;
+      const existingIdx = storeRules.findIndex(r => r.keyword.toLowerCase() === kw);
+      if (existingIdx >= 0) {
+        storeRules[existingIdx].store = st;
+      } else {
+        storeRules.unshift({ keyword: kw, store: st });
+      }
+      newRuleKeywordInput.value = '';
+      saveToStorage();
+    }
+    document.getElementById('add-rule-btn').addEventListener('click', addNewStoreRule);
+    newRuleKeywordInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addNewStoreRule();
+      }
+    });
+
+    // Preview Mode Toggle (Menu vs By Store)
+    const previewMenuBtn = document.getElementById('preview-mode-menu');
+    const previewStoresBtn = document.getElementById('preview-mode-stores');
+    function updatePreviewModeUI() {
+      if (sharePreviewMode === 'menu') {
+        previewMenuBtn.className = 'px-2 py-0.5 rounded bg-app-input text-slate-900 shadow-sm';
+        previewStoresBtn.className = 'px-2 py-0.5 rounded text-slate-700 hover:text-slate-900';
+      } else {
+        previewStoresBtn.className = 'px-2 py-0.5 rounded bg-app-input text-slate-900 shadow-sm';
+        previewMenuBtn.className = 'px-2 py-0.5 rounded text-slate-700 hover:text-slate-900';
+      }
+      renderGroceryAndShareDrawer();
+    }
+    previewMenuBtn.addEventListener('click', () => {
+      sharePreviewMode = 'menu';
+      updatePreviewModeUI();
+    });
+    previewStoresBtn.addEventListener('click', () => {
+      sharePreviewMode = 'stores';
+      updatePreviewModeUI();
+    });
+
+    // Add Extra Grocery Item
+    const newGroceryInput = document.getElementById('new-grocery-input');
+    const newGroceryStoreSelect = document.getElementById('new-grocery-store-select');
+    function addCustomGroceryItem() {
+      const val = newGroceryInput.value.trim();
+      const chosenStore = newGroceryStoreSelect.value;
+      if (!val) return;
+      const resolvedStore = chosenStore || resolveStoreForText(val);
+      if (chosenStore) {
+        itemStoreOverrides[val.toLowerCase()] = chosenStore;
+      }
+      customGroceryItems.push({ id: Date.now() + Math.random(), text: val, store: resolvedStore });
+      newGroceryInput.value = '';
+      saveToStorage();
+    }
+    document.getElementById('add-grocery-btn').addEventListener('click', addCustomGroceryItem);
+    newGroceryInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addCustomGroceryItem();
+      }
+    });
+
+    document.getElementById('clear-checked-grocery-btn').addEventListener('click', () => {
+      checkedGroceryKeys = {};
+      saveToStorage();
+    });
+
+    // Copy Menu & Copy Grocery List Buttons
+    document.getElementById('copy-menu-btn').addEventListener('click', () => {
+      sharePreviewMode = 'menu';
+      updatePreviewModeUI();
+      copyTextToClipboard(buildFormattedMenuSummary(), 'Menu Plan');
+    });
+
+    document.getElementById('copy-grocery-btn').addEventListener('click', () => {
+      sharePreviewMode = 'stores';
+      updatePreviewModeUI();
+      copyTextToClipboard(buildFormattedGroceryText(), 'Store Grocery List');
+    });
+
+    // Add Avoid Item
+    const newAvoidInput = document.getElementById('new-avoid-input');
+    function addAvoidItem() {
+      const val = newAvoidInput.value.trim().toLowerCase();
+      if (!val) return;
+      if (!avoidList.includes(val)) {
+        avoidList.push(val);
+        saveToStorage();
+        renderPreferencesDrawer();
+        renderDays();
+      }
+      newAvoidInput.value = '';
+    }
+    document.getElementById('add-avoid-btn').addEventListener('click', addAvoidItem);
+    newAvoidInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addAvoidItem();
+      }
+    });
+
+    // Add Favorite Chip
+    const newFavInput = document.getElementById('new-fav-input');
+    const newFavCat = document.getElementById('new-fav-category');
+    function addFavoriteChip() {
+      const val = newFavInput.value.trim();
+      const cat = newFavCat.value;
+      if (!val) return;
+      if (!favorites[cat].includes(val)) {
+        favorites[cat].push(val);
+        saveToStorage();
+        renderPreferencesDrawer();
+        renderDays();
+      }
+      newFavInput.value = '';
+    }
+    document.getElementById('add-fav-btn').addEventListener('click', addFavoriteChip);
+    newFavInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addFavoriteChip();
+      }
+    });
+
+    // Bottom Controls: Fridge Sheet View, JSON Download, Copy/Paste Sync Code, Clear All + Undo
+    const fridgeViewSection = document.getElementById('fridge-view-section');
+    document.getElementById('toggle-fridge-view-btn').addEventListener('click', () => {
+      renderFridgeTable();
+      fridgeViewSection.classList.toggle('hidden');
+      if (!fridgeViewSection.classList.contains('hidden')) {
+        fridgeViewSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    document.getElementById('close-fridge-view-btn').addEventListener('click', () => {
+      fridgeViewSection.classList.add('hidden');
+    });
+
+    document.getElementById('print-fridge-btn').addEventListener('click', () => {
+      window.print();
+    });
+
+    document.getElementById('download-json-backup-btn').addEventListener('click', () => {
+      const dataStr = JSON.stringify(getFullBackupPayload(), null, 2);
+      const blob = new Blob([dataStr], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'family-meal-planner-backup.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showBackupStatus('✓ Downloaded family-meal-planner-backup.json!', false);
+    });
+
+    document.getElementById('copy-sync-code-btn').addEventListener('click', () => {
+      const code = JSON.stringify(getFullBackupPayload());
+      copyTextToClipboard(code, 'Sync Code', () => {
+        showBackupStatus('✓ Copied sync code to clipboard! Send or paste it on your other device.', false);
+      });
+    });
+
+    document.getElementById('import-sync-code-btn').addEventListener('click', () => {
+      const importArea = document.getElementById('import-sync-textarea');
+      const raw = (importArea.value || '').trim();
+      if (!raw) {
+        showBackupStatus('Please paste a backup sync code into Box #2 first.', true);
+        return;
+      }
+      try {
+        const parsed = JSON.parse(raw);
+        applyParsedBackup(parsed);
+        saveToStorage();
+        renderPreferencesDrawer();
+        renderDayPills();
+        renderDays();
+        importArea.value = '';
+        showBackupStatus('✓ Restored your meal plans, notes, templates, favorites, avoid list & store rules!', false);
+      } catch (e) {
+        showBackupStatus('Note: That code did not look like valid backup data. Please copy the entire sync code and try again.', true);
+      }
+    });
+
+    // Close Toast
+    document.getElementById('close-toast-btn').addEventListener('click', () => {
+      document.getElementById('autofill-toast').classList.add('hidden');
+    });
+
+    // View mode switching
+    document.getElementById('view-week-btn').addEventListener('click', () => {
+      viewMode = 'week';
+      updateViewModeButtons();
+      renderDays();
+    });
+
+    document.getElementById('view-day-btn').addEventListener('click', () => {
+      viewMode = 'day';
+      updateViewModeButtons();
+      renderDays();
+    });
+
+    // Load Sample Week (filtering out anything on the Avoid List)
+    document.getElementById('fill-example-btn').addEventListener('click', () => {
+      const safeMeals = mealPool.filter(t => !templateConflictsWithAvoid(t));
+      const skippedCount = mealPool.length - safeMeals.length;
+
+      if (safeMeals.length === 0) {
+        showToast('No meals left after filtering your Avoid List! Try removing an item from the Avoid List.');
+        return;
+      }
+
+      days.forEach((d, idx) => {
+        const chosen = safeMeals[(idx + poolOffset) % safeMeals.length];
+        mealState[d.id] = { prepTag: 'fresh', leftoverFrom: '', ...chosen };
+      });
+      poolOffset = (poolOffset + 1) % safeMeals.length;
+
+      saveToStorage();
+      renderDayPills();
+      renderDays();
+
+      if (avoidList.length > 0) {
+        showToast(`Filled ${getActiveWeekLabel()}! Skipped ${skippedCount} meal option(s) containing avoided items (${avoidList.join(', ')}).`);
+      } else {
+        showToast(`Filled ${getActiveWeekLabel()} with family meals!`);
+      }
+    });
+
+    // Clear all with inline confirmation banner + 1-Tap Undo
+    const clearBanner = document.getElementById('clear-confirm-banner');
+    const clearConfirmText = document.getElementById('clear-confirm-text');
+    document.getElementById('clear-all-btn').addEventListener('click', () => {
+      if (clearConfirmText) {
+        clearConfirmText.textContent = `Are you sure you want to clear ${getActiveWeekLabel()}'s meal plan? (You can Undo right after if needed.)`;
+      }
+      clearBanner.classList.remove('hidden');
+    });
+
+    document.getElementById('confirm-clear-cancel').addEventListener('click', () => {
+      clearBanner.classList.add('hidden');
+    });
+
+    document.getElementById('confirm-clear-yes').addEventListener('click', () => {
+      // Save snapshot before clearing so user can Undo in 1 tap
+      lastClearedSnapshot = {
+        weekKey: activeWeekKey,
+        weekLabel: getActiveWeekLabel(),
+        data: JSON.parse(JSON.stringify(mealState))
+      };
+      weeksData[activeWeekKey] = getEmptyMealState();
+      mealState = weeksData[activeWeekKey];
+      saveToStorage();
+      renderDayPills();
+      renderDays();
+      clearBanner.classList.add('hidden');
+      showBackupStatus(`Cleared ${lastClearedSnapshot.weekLabel}. Tap "↩️ Undo Last Clear" above if that was an accident!`, false);
+    });
+
+    document.getElementById('undo-clear-btn').addEventListener('click', () => {
+      if (!lastClearedSnapshot) return;
+      const targetKey = lastClearedSnapshot.weekKey;
+      const restoredLabel = lastClearedSnapshot.weekLabel;
+      weeksData[targetKey] = JSON.parse(JSON.stringify(lastClearedSnapshot.data));
+      activeWeekKey = targetKey;
+      mealState = weeksData[activeWeekKey];
+      lastClearedSnapshot = null;
+      saveToStorage();
+      renderDayPills();
+      renderDays();
+      showBackupStatus(`✓ Restored ${restoredLabel}'s meal plan!`, false);
+      showToast(`Restored ${restoredLabel}'s meal plan!`);
+    });
+
+    // Step 9: Register Service Worker for Android / Desktop Offline PWA Caching
+    let deferredInstallPrompt = null;
+    const installPwaBtn = document.getElementById('install-pwa-btn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+      if (installPwaBtn) {
+        installPwaBtn.classList.remove('hidden');
+      }
+    });
+
+    if (installPwaBtn) {
+      installPwaBtn.addEventListener('click', async () => {
+        if (deferredInstallPrompt) {
+          deferredInstallPrompt.prompt();
+          await deferredInstallPrompt.userChoice;
+          deferredInstallPrompt = null;
+          installPwaBtn.classList.add('hidden');
+        } else {
+          showToast('To install on Android: tap Chrome Menu (⋮) → "Add to Home screen" or "Install app".');
+        }
+      });
+    }
+
+    function updateNetworkBadge() {
+      const badge = document.getElementById('save-status');
+      if (!badge) return;
+      if (!navigator.onLine) {
+        badge.textContent = 'Offline Ready ✓';
+      }
+    }
+    window.addEventListener('online', () => flashSavedIndicator());
+    window.addEventListener('offline', updateNetworkBadge);
+
+    if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.port !== '')) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {
+          // Ignore registration error inside sandboxed preview iframe
+        });
+      });
+    }
+
+    // Initialize app
+    loadFromStorage();
+    updateWeekSwitcherUI();
+    updateWeekPrepSummary();
+    updateNotesIndicator();
+    updateUndoButtonUI();
+    renderTemplatesDrawer();
+    renderPreferencesDrawer();
+    renderGroceryAndShareDrawer();
+    renderFridgeTable();
+    updateBackupSyncTextarea();
+    updateViewModeButtons();
+    renderDayPills();
+    renderDays();
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# Family Meal Planner - Mac mini Caddy Configuration
+#
+# OPTION A (Default): Plain HTTP on port 21110
+# Works with the Chrome flag: chrome://flags/#unsafely-treat-insecure-origin-as-secure
+:21110 {
+    root * .
+    file_server
+
+    @no_cache {
+        path /sw.js /index.html /manifest.json
+    }
+    header @no_cache Cache-Control "no-cache"
+}
+
+# OPTION B: Local HTTPS on port 21111 (For true Android standalone mode without Chrome flags!)
+# Caddy automatically generates a local SSL certificate using `tls internal`.
+# Visit https://<your-mac-mini-ip>:21111
+:21111 {
+    tls internal
+    root * .
+    file_server
+
+    @no_cache {
+        path /sw.js /index.html /manifest.json
+    }
+    header @no_cache Cache-Control "no-cache"
+}

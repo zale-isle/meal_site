@@ -1,4 +1,4 @@
-FAMILY MEAL PLANNER — GITHUB PAGES & MAC MINI PWA BUNDLE
+FAMILY MEAL PLANNER — GITHUB PAGES & PWA BUNDLE
 =========================================================
 
 FILES INCLUDED:
@@ -12,7 +12,7 @@ FILES INCLUDED:
 - Caddyfile     : Optional local Mac mini server config (Port 21110)
 
 ---------------------------------------------------------
-HOW TO DEPLOY ON GITHUB PAGES (FOR MOTOROLA RAZR & VERSIONING)
+HOW TO DEPLOY ON GITHUB PAGES (FOR Mobile & VERSIONING)
 ---------------------------------------------------------
 Option A — Drag & Drop in Your Browser (No Terminal Needed, 60 Seconds):
 1. Go to https://github.com/new and create a new repository (e.g. `meal-planner`).
@@ -36,12 +36,12 @@ Option B — From Your Mac mini Terminal (With Git Version Control):
 2. Enable GitHub Pages in Settings -> Pages -> Branch: `main` -> Save.
 
 ---------------------------------------------------------
-INSTALLING ON YOUR MOTOROLA RAZR (STANDALONE + SPLIT SCREEN)
+INSTALLING ON YOUR Mobile (STANDALONE + SPLIT SCREEN)
 ---------------------------------------------------------
-1. Delete any old Meal Planner shortcut from your Razr Home Screen first.
+1. Delete any old Meal Planner shortcut from your Home Screen first.
 2. Open your `https://<your-username>.github.io/meal-planner/` URL in Chrome on your Razr.
 3. Tap the purple "📲 Install App" button at the bottom of the page (or Chrome's ⋮ menu -> "Add to Home screen" -> "Install").
 4. Because GitHub Pages uses real HTTPS and relative manifest paths with no orientation lock, Android builds a true WebAPK:
    - Opens in full-screen Standalone Mode (no Chrome address bar)
    - Supports Razr Split Screen, Flex View, and External Cover Screen
-   - Works 100% offline inside grocery stores!
+   - Works 100% offline

@@ -12,7 +12,6 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj4KICA8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQwIiBmaWxsPSIjMWUyOTNiIi8+CiAgPHJlY3QgeD0iMjQiIHk9IjM2IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjEzMiIgcng9IjIwIiBmaWxsPSIjZTZlM2VlIi8+CiAgPHBhdGggZD0iTTI0IDU2IEMyNCA0NC45NTQgMzIuOTU0IDM2IDQ0IDM2IEwxNDggMzYgQzE1OS4wNDYgMzYgMTY4IDQ0Ljk1NCAxNjggNTYgTDE2OCA3MiBMMjQgNzIgWiIgZmlsbD0iIzExNWU1OSIvPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iMzYiIHI9IjEwIiBmaWxsPSIjNjUyNTM4Ii8+CiAgPGNpcmNsZSBjeD0iMTMyIiBjeT0iMzYiIHI9IjEwIiBmaWxsPSIjNjUyNTM4Ii8+CiAgPHJlY3QgeD0iNDQiIHk9IjkwIiB3aWR0aD0iNDQiIGhlaWdodD0iMjQiIHJ4PSI2IiBmaWxsPSIjMGY3NjZlIi8+CiAgPHJlY3QgeD0iMTAwIiB5PSI5MCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjI0IiByeD0iNiIgZmlsbD0iIzZiMjFhOCIvPgogIDxyZWN0IHg9IjQ0IiB5PSIxMjQiIHdpZHRoPSI0NCIgaGVpZ2h0PSIyNCIgcng9IjYiIGZpbGw9IiMwNTk2NjkiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEyNCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjI0IiByeD0iNiIgZmlsbD0iI2Q5NzcwNiIvPgo8L3N2Zz4=">
   <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIgMTkyIj4KICA8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgcng9IjQwIiBmaWxsPSIjMWUyOTNiIi8+CiAgPHJlY3QgeD0iMjQiIHk9IjM2IiB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjEzMiIgcng9IjIwIiBmaWxsPSIjZTZlM2VlIi8+CiAgPHBhdGggZD0iTTI0IDU2IEMyNCA0NC45NTQgMzIuOTU0IDM2IDQ0IDM2IEwxNDggMzYgQzE1OS4wNDYgMzYgMTY4IDQ0Ljk1NCAxNjggNTYgTDE2OCA3MiBMMjQgNzIgWiIgZmlsbD0iIzExNWU1OSIvPgogIDxjaXJjbGUgY3g9IjYwIiBjeT0iMzYiIHI9IjEwIiBmaWxsPSIjNjUyNTM4Ii8+CiAgPGNpcmNsZSBjeD0iMTMyIiBjeT0iMzYiIHI9IjEwIiBmaWxsPSIjNjUyNTM4Ii8+CiAgPHJlY3QgeD0iNDQiIHk9IjkwIiB3aWR0aD0iNDQiIGhlaWdodD0iMjQiIHJ4PSI2IiBmaWxsPSIjMGY3NjZlIi8+CiAgPHJlY3QgeD0iMTAwIiB5PSI5MCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjI0IiByeD0iNiIgZmlsbD0iIzZiMjFhOCIvPgogIDxyZWN0IHg9IjQ0IiB5PSIxMjQiIHdpZHRoPSI0NCIgaGVpZ2h0PSIyNCIgcng9IjYiIGZpbGw9IiMwNTk2NjkiLz4KICA8cmVjdCB4PSIxMDAiIHk9IjEyNCIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjI0IiByeD0iNiIgZmlsbD0iI2Q5NzcwNiIvPgo8L3N2Zz4=">
   <link rel="manifest" href="./manifest.json">
-  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -181,6 +180,10 @@
         </div>
 
         <div class="flex flex-wrap gap-2">
+          <button id="toggle-notifications-btn" type="button" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-900 text-white text-xs sm:text-sm font-semibold rounded-lg shadow-sm transition flex items-center gap-1.5">
+            <span>🔔 Alerts</span>
+            <span id="notif-status-dot" class="w-2 h-2 rounded-full bg-amber-400"></span>
+          </button>
           <button id="toggle-templates-btn" type="button" class="px-3.5 py-2 bg-indigo-900 hover:bg-indigo-950 text-white text-xs sm:text-sm font-semibold rounded-lg shadow-sm transition flex items-center gap-1.5">
             <span>📂 Week Templates</span>
             <span id="templates-count-badge" class="px-1.5 py-0.5 text-[11px] rounded-full bg-indigo-950 text-indigo-100 font-bold">2</span>
@@ -234,6 +237,73 @@
       <div id="autofill-toast" class="hidden mt-3 bg-slate-800 border border-slate-700 text-slate-100 rounded-lg px-3.5 py-2 text-xs sm:text-sm flex items-center justify-between shadow-sm">
         <span id="autofill-toast-text"></span>
         <button id="close-toast-btn" type="button" class="text-slate-300 hover:text-white font-bold ml-3">✕</button>
+      </div>
+
+      <!-- Step 10: Notifications & Prep Reminders Drawer -->
+      <div id="notifications-drawer" class="hidden mt-4 bg-app-surface rounded-xl border border-app-muted shadow-sm p-4 transition-all">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Left (6 cols): Android App Notification Settings -->
+          <div class="lg:col-span-6 bg-app-card border border-app-subtle rounded-xl p-3.5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-700"></span>
+                  🔔 Android App Notifications
+                </h2>
+                <span id="notif-permission-badge" class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-app-subcard text-slate-800">
+                  Ready
+                </span>
+              </div>
+              <p class="text-xs text-slate-700 mb-3">
+                Enable notifications on your Razr to get a daily summary of tonight's dinner (plus B/X alternates) and a heads-up when tomorrow is a Slow Cooker, Freezer, or Make-Ahead day.
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-3">
+                <button id="enable-notif-btn" type="button" class="px-3 py-1.5 bg-teal-800 hover:bg-teal-900 text-white text-xs font-semibold rounded-lg shadow-sm transition">
+                  🔔 Enable App Notifications
+                </button>
+                <button id="send-test-notif-btn" type="button" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold rounded-lg shadow-sm transition">
+                  📲 Send Tonight's Dinner Alert Now
+                </button>
+              </div>
+
+              <!-- Daily Briefing Toggle -->
+              <div class="pt-2.5 border-t border-app-subtle flex flex-wrap items-center justify-between gap-2 text-xs">
+                <label for="auto-daily-notif-check" class="inline-flex items-center gap-2 cursor-pointer select-none font-semibold text-slate-800">
+                  <input type="checkbox" id="auto-daily-notif-check" class="w-4 h-4 rounded text-teal-700 border-slate-400 focus:ring-teal-600">
+                  <span>Auto-notify me with today's dinner &amp; prep check</span>
+                </label>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[11px] text-slate-600">Target time:</span>
+                  <input type="time" id="notif-target-time" value="16:00" class="text-xs px-2 py-1 rounded border border-app-muted bg-app-input text-slate-800 font-semibold">
+                </div>
+              </div>
+            </div>
+            <p id="notif-feedback-msg" class="text-[11px] font-semibold text-teal-900 mt-2.5 min-h-[16px]"></p>
+          </div>
+
+          <!-- Right (6 cols): Smart Prep & Defrost Calendar Alarms -->
+          <div class="lg:col-span-6 bg-app-card border border-app-subtle rounded-xl p-3.5 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <h2 class="text-sm font-bold text-slate-900 flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-indigo-800"></span>
+                  ⏰ This Week's Prep &amp; Defrost Reminders
+                </h2>
+                <span class="text-[11px] font-semibold bg-indigo-100 text-indigo-900 px-2 py-0.5 rounded-full">Wakes Sleeping Phone</span>
+              </div>
+              <p class="text-xs text-slate-700 mb-2.5">
+                Whenever you mark a day as <strong>🍲 Slow Cooker</strong>, <strong>🧊 From Freezer</strong>, or <strong>🥣 Make Ahead</strong>, it appears below. Tap <strong>+ Phone Alert</strong> or <strong>🔔 Ping</strong> so your phone alerts you right on time:
+              </p>
+              <div id="prep-reminders-list" class="space-y-2 max-h-44 overflow-y-auto pr-1">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+            <p class="text-[11px] text-slate-600 mt-2 italic">
+              Tip: Each day card also has a <strong>🔔</strong> button in its header to send a notification for that specific dinner!
+            </p>
+          </div>
+        </div>
       </div>
 
       <!-- Brain Dump / Notes Drawer (Toggled by 📝 Notes button in header) -->
@@ -446,6 +516,7 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-2 mb-3">
               <select id="new-fav-category" class="text-xs sm:text-sm px-2.5 py-1.5 rounded-lg border border-app-muted bg-app-input text-slate-800 font-medium focus:outline-none focus:border-teal-700">
+                <option value="lunch">Lunch</option>
                 <option value="main">Main Dinner</option>
                 <option value="veggies">Extra Veggies</option>
                 <option value="bAlt">B Alt</option>
@@ -538,6 +609,7 @@
           <thead>
             <tr class="border-b border-slate-400 bg-app-surface text-slate-900">
               <th class="py-2 px-2.5 font-bold w-28">Day &amp; Style</th>
+              <th class="py-2 px-2.5 font-bold">Lunch</th>
               <th class="py-2 px-2.5 font-bold">Main Dinner (Mama, Pops, Arrw)</th>
               <th class="py-2 px-2.5 font-bold">Extra Veggies</th>
               <th class="py-2 px-2.5 font-bold text-purple-950">B Alt</th>
@@ -633,17 +705,17 @@
   </div>
 
   <script>
-    const STORAGE_KEY = 'family_meal_planner_v9';
-    const LEGACY_KEYS = ['family_meal_planner_v8', 'family_meal_planner_v7', 'family_meal_planner_v6', 'family_meal_planner_v5', 'family_meal_planner_v4', 'family_meal_planner_v3', 'family_meal_planner_v2'];
+    const STORAGE_KEY = 'family_meal_planner_v11';
+    const LEGACY_KEYS = ['family_meal_planner_v10', 'family_meal_planner_v9', 'family_meal_planner_v8', 'family_meal_planner_v7', 'family_meal_planner_v6', 'family_meal_planner_v5', 'family_meal_planner_v4', 'family_meal_planner_v3', 'family_meal_planner_v2'];
 
     const days = [
-      { id: 'mon', short: 'Mon', pill: 'M', name: 'Monday' },
-      { id: 'tue', short: 'Tue', pill: 'T', name: 'Tuesday' },
-      { id: 'wed', short: 'Wed', pill: 'W', name: 'Wednesday' },
-      { id: 'thu', short: 'Thu', pill: 'Th', name: 'Thursday' },
-      { id: 'fri', short: 'Fri', pill: 'F', name: 'Friday' },
-      { id: 'sat', short: 'Sat', pill: 'Sa', name: 'Saturday' },
-      { id: 'sun', short: 'Sun', pill: 'Su', name: 'Sunday' }
+      { id: 'mon', short: 'Mon', pill: 'M', name: 'Monday', jsDay: 1 },
+      { id: 'tue', short: 'Tue', pill: 'T', name: 'Tuesday', jsDay: 2 },
+      { id: 'wed', short: 'Wed', pill: 'W', name: 'Wednesday', jsDay: 3 },
+      { id: 'thu', short: 'Thu', pill: 'Th', name: 'Thursday', jsDay: 4 },
+      { id: 'fri', short: 'Fri', pill: 'F', name: 'Friday', jsDay: 5 },
+      { id: 'sat', short: 'Sat', pill: 'Sa', name: 'Saturday', jsDay: 6 },
+      { id: 'sun', short: 'Sun', pill: 'Su', name: 'Sunday', jsDay: 0 }
     ];
 
     // Prep & Leftover Day Tags
@@ -877,6 +949,14 @@
     ];
 
     const defaultFavorites = {
+      lunch: [
+        'Sandwiches & fruit',
+        'Cheese quesadilla',
+        'Soup & crackers',
+        'Mac & cheese',
+        'PB&J + carrot sticks',
+        'Leftovers buffet'
+      ],
       main: [
         'Tacos & toppings',
         'Spaghetti & meat sauce',
@@ -954,7 +1034,8 @@
     };
     let mealState = {};
     let brainDumpNotes = '';
-    let lastClearedSnapshot = null; // Stores { weekKey, data } so accidental Clear All can be undone in 1 tap
+    let lastClearedSnapshot = null;
+    let notifSettings = { autoDaily: false, targetTime: '16:00', lastNotifiedDate: '' }; // Stores { weekKey, data } so accidental Clear All can be undone in 1 tap
 
     let weekTemplates = JSON.parse(JSON.stringify(defaultWeekTemplates));
     let favorites = JSON.parse(JSON.stringify(defaultFavorites));
@@ -969,9 +1050,14 @@
     function getEmptyMealState() {
       const state = {};
       days.forEach(d => {
+        const isWeekend = (d.id === 'sat' || d.id === 'sun');
         state[d.id] = {
           prepTag: 'fresh',
           leftoverFrom: '',
+          lunchEnabled: isWeekend,
+          lunch: '',
+          guestEnabled: false,
+          guests: 'Grandparents',
           main: '',
           veggies: '',
           bEnabled: false,
@@ -991,6 +1077,12 @@
           base[d.id] = { ...base[d.id], ...rawWeek[d.id] };
           if (!base[d.id].prepTag) base[d.id].prepTag = 'fresh';
           if (typeof base[d.id].leftoverFrom !== 'string') base[d.id].leftoverFrom = '';
+          if (typeof base[d.id].lunch !== 'string') base[d.id].lunch = '';
+          if (typeof base[d.id].lunchEnabled !== 'boolean') {
+            base[d.id].lunchEnabled = (d.id === 'sat' || d.id === 'sun') || (base[d.id].lunch.trim().length > 0);
+          }
+          if (typeof base[d.id].guestEnabled !== 'boolean') base[d.id].guestEnabled = false;
+          if (typeof base[d.id].guests !== 'string' || !base[d.id].guests) base[d.id].guests = 'Grandparents';
         }
       });
       return base;
@@ -1003,6 +1095,7 @@
         weeksData: weeksData,
         meals: weeksData.thisWeek,
         brainDumpNotes: brainDumpNotes,
+        notifSettings: notifSettings,
         weekTemplates: weekTemplates,
         favorites: favorites,
         avoidList: avoidList,
@@ -1022,6 +1115,7 @@
       }
       mealState = weeksData[activeWeekKey];
       if (typeof parsed.brainDumpNotes === 'string') brainDumpNotes = parsed.brainDumpNotes;
+      if (parsed.notifSettings) notifSettings = { ...notifSettings, ...parsed.notifSettings };
       if (Array.isArray(parsed.weekTemplates)) weekTemplates = parsed.weekTemplates;
       if (parsed.favorites) favorites = { ...defaultFavorites, ...parsed.favorites };
       if (Array.isArray(parsed.avoidList)) avoidList = parsed.avoidList;
@@ -1093,6 +1187,7 @@
       updateWeekPrepSummary();
       updateNotesIndicator();
       updateUndoButtonUI();
+      renderNotificationsDrawer();
       renderTemplatesDrawer();
       renderGroceryAndShareDrawer();
       renderFridgeTable();
@@ -1215,7 +1310,9 @@
           <td class="py-2.5 px-2.5 font-bold text-slate-800">
             <div>${d.name}</div>
             <span class="inline-block mt-0.5 text-[10px] font-semibold px-1.5 py-0.5 rounded border ${tagMeta.badgeClass}">${styleLabel}</span>
+            ${st.guestEnabled ? `<div class="mt-1"><span class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-amber-100 text-amber-950 border border-amber-300">👥 ${st.guests || 'Grandparents'}</span></div>` : ''}
           </td>
+          <td class="py-2.5 px-2.5 text-indigo-950 font-medium">${st.lunch && st.lunch.trim() ? st.lunch : '<span class="text-slate-400 italic">—</span>'}</td>
           <td class="py-2.5 px-2.5 text-slate-800 font-medium">${st.main && st.main.trim() ? st.main : '<span class="text-slate-400 italic">—</span>'}</td>
           <td class="py-2.5 px-2.5 text-teal-900">${st.veggies && st.veggies.trim() ? st.veggies : '<span class="text-slate-400 italic">—</span>'}</td>
           <td class="py-2.5 px-2.5 text-purple-950">${st.bEnabled && st.bAlt && st.bAlt.trim() ? st.bAlt : '<span class="text-slate-500 text-xs">Same as main</span>'}</td>
@@ -1346,11 +1443,23 @@
         const pTag = st.prepTag || 'fresh';
         const skipMainGrocery = pTag === 'leftovers' || pTag === 'takeout';
 
+        if (st.lunch && st.lunch.trim() && !st.lunch.toLowerCase().startsWith('leftover')) {
+          const lTxt = st.lunch.trim();
+          items.push({
+            key: `${activeWeekKey}-${d.id}-lunch-${lTxt}`,
+            text: lTxt,
+            store: resolveStoreForText(lTxt),
+            tag: `${d.pill} Lunch`,
+            badgeClass: 'bg-indigo-100 text-indigo-900',
+            isCustom: false
+          });
+        }
         if (!skipMainGrocery && st.main && st.main.trim()) {
           const txt = st.main.trim();
+          const guestTag = (st.guestEnabled && st.guests && st.guests.trim()) ? ` (👥 Extra for ${st.guests.trim()})` : '';
           items.push({
             key: `${activeWeekKey}-${d.id}-main-${txt}`,
-            text: txt,
+            text: txt + guestTag,
             store: resolveStoreForText(txt),
             tag: `${d.pill} Main`,
             badgeClass: 'bg-teal-100 text-teal-900',
@@ -1425,6 +1534,8 @@
         const tagText = fromDayObj && st.prepTag === 'leftovers' ? `${tagMeta.label} from ${fromDayObj.short}` : tagMeta.label;
         lines.push('');
         lines.push(`📅 ${d.name.toUpperCase()} [${tagText}]`);
+        if (st.guestEnabled && st.guests && st.guests.trim()) lines.push(`  • 👥 Guests: ${st.guests.trim()}`);
+        if (st.lunch && st.lunch.trim()) lines.push(`  • Lunch: ${st.lunch.trim()}`);
         if (hasMain) lines.push(`  • Main (Mama, Pops, Arrw): ${st.main.trim()}`);
         if (hasVeg) lines.push(`  • Extra Veggies: ${st.veggies.trim()}`);
         if (hasB) lines.push(`  • B Alt: ${st.bAlt.trim()}`);
@@ -1741,6 +1852,7 @@
       const favListEl = document.getElementById('fav-manager-list');
       favListEl.innerHTML = '';
       const catLabels = {
+        lunch: { label: 'Lunch' },
         main: { label: 'Main Dinner' },
         veggies: { label: 'Extra Veggies' },
         bAlt: { label: 'B Alt' },
@@ -1889,15 +2001,20 @@
           )
           .join('');
 
-        // Always list Mon-Sun in fixed order for Leftovers selector
-        const leftoverOptionsHtml =
-          `<option value="">🍱 Leftovers from...</option>` +
-          days
-            .map(
-              d =>
-                `<option value="${d.id}" ${currentLeftoverFrom === d.id ? 'selected' : ''}>From ${d.short}</option>`
-            )
-            .join('');
+        // Mon-Sun for all, fixed order, with Dinner and Lunch options
+        const leftoverOptions = [
+          { val: '', label: '🍱 Leftovers from...' }
+        ];
+        days.forEach(d => {
+          leftoverOptions.push({ val: `${d.id}-dinner`, label: `From ${d.short} Dinner` });
+          leftoverOptions.push({ val: `${d.id}-lunch`, label: `From ${d.short} Lunch` });
+        });
+        const leftoverOptionsHtml = leftoverOptions.map(opt => {
+          const isSel = (currentLeftoverFrom === opt.val) ||
+                        (currentLeftoverFrom === opt.val.replace('-dinner', '') && opt.val.endsWith('-dinner'));
+          return `<option value="${opt.val}" ${isSel ? 'selected' : ''}>${opt.label}</option>`;
+        }).join('');
+        const isWeekend = (day.id === 'sat' || day.id === 'sun');
 
         const card = document.createElement('div');
         card.id = `card-${day.id}`;
@@ -1911,6 +2028,9 @@
                 <h2 class="font-bold text-slate-900 text-base">${day.name}</h2>
                 <button type="button" data-shuffle-day="${day.id}" title="Suggest a safe meal (skips Avoid List)" class="text-[11px] font-semibold px-2 py-0.5 bg-app-subcard hover:bg-app-surface text-slate-800 border border-app-muted rounded-full transition">
                   ↻ Suggest
+                </button>
+                <button type="button" data-notify-day="${day.id}" title="Send notification for ${day.name}'s dinner" class="text-[11px] font-semibold px-2 py-0.5 bg-app-subcard hover:bg-teal-100 text-slate-800 hover:text-teal-950 border border-app-muted rounded-full transition">
+                  🔔
                 </button>
               </div>
               ${viewMode === 'day' ? `
@@ -1940,6 +2060,26 @@
               <span>🚫 Note: Contains an item on your Avoid List</span>
             </div>
 
+            <!-- Step 11: Lunch Tracking (Aligned with Main Dinner & Veggies; Always visible Sat/Sun, Collapsed Mon-Fri) -->
+            <div class="mb-3">
+              <div class="flex items-center justify-between mb-1">
+                <label for="${day.id}-lunch" class="text-xs font-semibold text-slate-800 flex items-center gap-1.5 cursor-pointer">
+                  <span class="w-2 h-2 rounded-full bg-indigo-700"></span>
+                  <span>Lunch</span>
+                  ${isWeekend ? '<span class="text-[10px] font-bold text-indigo-950 bg-indigo-100 px-1.5 py-0.2 rounded-full">Weekend</span>' : ''}
+                </label>
+                ${!isWeekend ? `
+                  <button type="button" data-toggle-lunch="${day.id}" class="text-[11px] font-semibold px-2 py-0.5 rounded transition ${dState.lunchEnabled ? 'bg-indigo-100 text-indigo-950 border border-indigo-300' : 'bg-app-subcard hover:bg-white text-slate-700 border border-app-muted'}">
+                    ${dState.lunchEnabled ? '− Hide Lunch' : '+ Lunch'}
+                  </button>
+                ` : ''}
+              </div>
+              <div id="${day.id}-lunch-wrap" class="${dState.lunchEnabled ? '' : 'hidden'}">
+                <input type="text" id="${day.id}-lunch" value="${(dState.lunch || '').replace(/"/g, '&quot;')}" placeholder="e.g. Sandwiches, quesadillas, soup..." class="w-full text-xs sm:text-sm p-2 rounded-lg border border-app-muted bg-app-input focus:outline-none focus:ring-2 focus:ring-indigo-700/20 focus:border-indigo-700">
+                ${buildQuickChipsHTML(day.id, 'lunch', 'bg-app-input hover:bg-indigo-50 text-indigo-950 border-app-muted')}
+              </div>
+            </div>
+
             <!-- Main Dinner (Mama, Pops, Arrw) -->
             <div class="mb-3">
               <label for="${day.id}-main" class="block text-xs font-semibold text-slate-800 mb-1 flex items-center gap-1.5">
@@ -1958,6 +2098,20 @@
               </label>
               <input type="text" id="${day.id}-veggies" value="${dState.veggies.replace(/"/g, '&quot;')}" placeholder="Tap for quick veggies or type..." class="w-full text-xs sm:text-sm p-2 rounded-lg border border-app-muted focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-700 bg-app-input">
               ${buildQuickChipsHTML(day.id, 'veggies', 'bg-app-input hover:bg-emerald-50 text-emerald-950 border-app-muted')}
+            </div>
+
+            <!-- Step 11: Guest / Grandparent Tracking -->
+            <div class="mb-3 bg-app-subcard/60 p-2 rounded-lg border border-app-muted/70">
+              <div class="flex items-center justify-between">
+                <label for="${day.id}-check-guests" class="inline-flex items-center gap-1.5 cursor-pointer select-none text-xs font-semibold text-slate-800">
+                  <input type="checkbox" id="${day.id}-check-guests" ${dState.guestEnabled ? 'checked' : ''} class="w-4 h-4 rounded text-amber-700 border-slate-400 focus:ring-amber-600">
+                  <span>👥 Guests for Dinner</span>
+                </label>
+                ${dState.guestEnabled ? `<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-950 border border-amber-300">👥 ${dState.guests || 'Grandparents'}</span>` : ''}
+              </div>
+              <div id="${day.id}-guests-wrap" class="${dState.guestEnabled ? 'mt-2' : 'hidden'}">
+                <input type="text" id="${day.id}-guests" value="${(dState.guests || 'Grandparents').replace(/"/g, '&quot;')}" placeholder="Who is eating with us? (e.g. Grandparents, 2 guests...)" class="w-full text-xs sm:text-sm p-1.5 rounded-md border border-amber-300/80 bg-app-input text-slate-800 focus:outline-none focus:ring-2 focus:ring-amber-500/20 focus:border-amber-600">
+              </div>
             </div>
 
             <!-- Compact Alts Checkbox Bar: "Alts: [ ] B   [ ] X" (dropped age labels) -->
@@ -2002,6 +2156,12 @@
 
         const prepSelect = document.getElementById(`${day.id}-prep-tag`);
         const leftoverSelect = document.getElementById(`${day.id}-leftover-from`);
+        const lunchToggleBtn = card.querySelector(`[data-toggle-lunch="${day.id}"]`);
+        const lunchWrap = document.getElementById(`${day.id}-lunch-wrap`);
+        const lunchInput = document.getElementById(`${day.id}-lunch`);
+        const checkGuests = document.getElementById(`${day.id}-check-guests`);
+        const guestsWrap = document.getElementById(`${day.id}-guests-wrap`);
+        const guestsInput = document.getElementById(`${day.id}-guests`);
         const mainInput = document.getElementById(`${day.id}-main`);
         const vegInput = document.getElementById(`${day.id}-veggies`);
         const checkB = document.getElementById(`${day.id}-check-b`);
@@ -2025,45 +2185,105 @@
           saveToStorage();
         });
 
-        // Leftovers from Day selector (Always Mon-Sun order)
+        // Leftovers from Day selector (Mon-Sun with Dinner and Lunch options)
         leftoverSelect.addEventListener('change', (e) => {
-          const sourceDayId = e.target.value;
-          mealState[day.id].leftoverFrom = sourceDayId;
+          const sourceVal = e.target.value;
+          mealState[day.id].leftoverFrom = sourceVal;
 
-          if (!sourceDayId) {
+          if (!sourceVal) {
             leftoverSelect.className = 'w-full text-[11px] font-semibold px-2 py-1 rounded-lg border cursor-pointer focus:outline-none bg-app-surface text-slate-800 border-app-muted';
             saveToStorage();
             return;
           }
 
+          let sourceDayId = sourceVal;
+          let isFromLunch = false;
+          if (sourceVal.endsWith('-lunch')) {
+            sourceDayId = sourceVal.replace('-lunch', '');
+            isFromLunch = true;
+          } else if (sourceVal.endsWith('-dinner')) {
+            sourceDayId = sourceVal.replace('-dinner', '');
+          }
+
           const sourceDayObj = days.find(d => d.id === sourceDayId);
-          const sourceState = mealState[sourceDayId];
+          const sourceState = mealState[sourceDayId] || {};
           mealState[day.id].prepTag = 'leftovers';
 
-          if (sourceState && sourceState.main && sourceState.main.trim()) {
-            const cleanMain = sourceState.main.replace(/^Leftovers\s*(\([^)]*\))?:\s*/i, '').trim();
-            mealState[day.id].main = `Leftovers (${sourceDayObj.short}): ${cleanMain}`;
-            if (!mealState[day.id].veggies && sourceState.veggies) {
+          const mealToCopy = isFromLunch ? sourceState.lunch : sourceState.main;
+          const mealTypeLabel = isFromLunch ? 'Lunch' : 'Dinner';
+
+          if (mealToCopy && mealToCopy.trim()) {
+            const cleanMain = mealToCopy.replace(/^Leftovers\s*(\([^)]*\))?:\s*/i, '').trim();
+            mealState[day.id].main = `Leftovers (${sourceDayObj.short} ${mealTypeLabel}): ${cleanMain}`;
+            if (!mealState[day.id].veggies && sourceState.veggies && !isFromLunch) {
               mealState[day.id].veggies = sourceState.veggies;
             }
-            if (sourceState.bEnabled) {
+            if (sourceState.bEnabled && !isFromLunch) {
               mealState[day.id].bEnabled = true;
               mealState[day.id].bAlt = sourceState.bAlt || '';
             }
-            if (sourceState.xEnabled) {
+            if (sourceState.xEnabled && !isFromLunch) {
               mealState[day.id].xEnabled = true;
               mealState[day.id].xAlt = sourceState.xAlt || '';
             }
-            showToast(`Copied ${sourceDayObj.name}'s meal into ${day.name} as Leftovers!`);
+            showToast(`Copied ${sourceDayObj.name} ${mealTypeLabel} into ${day.name} as Leftovers!`);
           } else {
-            mealState[day.id].main = `Leftovers from ${sourceDayObj.name}`;
-            showToast(`Marked ${day.name} as Leftovers from ${sourceDayObj.name}!`);
+            mealState[day.id].main = `Leftovers from ${sourceDayObj.name} ${mealTypeLabel}`;
+            showToast(`Marked ${day.name} as Leftovers from ${sourceDayObj.name} ${mealTypeLabel}!`);
           }
 
           saveToStorage();
           renderDayPills();
           renderDays();
         });
+
+        // Lunch toggle & input listeners
+        if (lunchToggleBtn && lunchWrap) {
+          lunchToggleBtn.addEventListener('click', () => {
+            mealState[day.id].lunchEnabled = !mealState[day.id].lunchEnabled;
+            if (mealState[day.id].lunchEnabled) {
+              lunchWrap.classList.remove('hidden');
+              lunchToggleBtn.textContent = '− Hide Lunch';
+              lunchToggleBtn.className = 'text-[11px] font-semibold px-2 py-0.5 rounded transition bg-indigo-100 text-indigo-950 border border-indigo-300';
+              if (lunchInput) lunchInput.focus();
+            } else {
+              lunchWrap.classList.add('hidden');
+              lunchToggleBtn.textContent = '+ Lunch';
+              lunchToggleBtn.className = 'text-[11px] font-semibold px-2 py-0.5 rounded transition bg-app-subcard hover:bg-white text-slate-700 border border-app-muted';
+            }
+            saveToStorage();
+          });
+        }
+
+        if (lunchInput) {
+          lunchInput.addEventListener('focus', () => showChipsFor('lunch'));
+          lunchInput.addEventListener('input', (e) => {
+            mealState[day.id].lunch = e.target.value;
+            saveToStorage();
+          });
+        }
+
+        // Guests toggle & input listeners
+        if (checkGuests && guestsWrap) {
+          checkGuests.addEventListener('change', (e) => {
+            mealState[day.id].guestEnabled = e.target.checked;
+            if (e.target.checked) {
+              guestsWrap.classList.remove('hidden');
+              if (guestsInput) guestsInput.focus();
+            } else {
+              guestsWrap.classList.add('hidden');
+            }
+            saveToStorage();
+            renderDays();
+          });
+        }
+
+        if (guestsInput) {
+          guestsInput.addEventListener('input', (e) => {
+            mealState[day.id].guests = e.target.value;
+            saveToStorage();
+          });
+        }
 
         function checkDayAvoidWarning() {
           const st = mealState[day.id];
@@ -2159,6 +2379,7 @@
             const field = chipBtn.getAttribute('data-chip-field');
             const val = chipBtn.getAttribute('data-chip-val');
             mealState[day.id][field] = val;
+            if (field === 'lunch' && lunchInput) lunchInput.value = val;
             if (field === 'main') mainInput.value = val;
             if (field === 'veggies') vegInput.value = val;
             if (field === 'bAlt') bInput.value = val;
@@ -2168,6 +2389,14 @@
             checkDayAvoidWarning();
           });
         });
+
+        const notifyBtn = card.querySelector(`[data-notify-day="${day.id}"]`);
+        if (notifyBtn) {
+          notifyBtn.addEventListener('click', () => {
+            const payload = buildDayNotificationPayload(day.id);
+            triggerAppNotification(payload.title, payload.body);
+          });
+        }
 
         const shuffleBtn = card.querySelector(`[data-shuffle-day="${day.id}"]`);
         if (shuffleBtn) {
@@ -2206,18 +2435,352 @@
       });
     }
 
-    // Drawer Toggles (Notes, Templates, Grocery, Preferences)
+    // Step 10: Web Notifications & Calendar (.ics) Reminder Engine
+    function showNotifFeedback(msg) {
+      const el = document.getElementById('notif-feedback-msg');
+      if (!el) return;
+      el.textContent = msg;
+      setTimeout(() => {
+        if (el.textContent === msg) el.textContent = '';
+      }, 4000);
+    }
+
+    function getTodayAndTomorrowIds() {
+      const jsDayNow = new Date().getDay();
+      const todayIndex = days.findIndex(d => d.jsDay === jsDayNow);
+      const safeTodayIdx = todayIndex >= 0 ? todayIndex : 0;
+      const tomorrowIdx = (safeTodayIdx + 1) % days.length;
+      return {
+        todayObj: days[safeTodayIdx],
+        tomorrowObj: days[tomorrowIdx]
+      };
+    }
+
+    function buildDayNotificationPayload(dayId) {
+      const dayObj = days.find(d => d.id === dayId) || days[0];
+      const st = mealState[dayObj.id] || {};
+      const tagMeta = getPrepTagMeta(st.prepTag);
+      const mainTxt = st.main && st.main.trim() ? st.main.trim() : 'No main dinner entered yet';
+      const parts = [];
+      if (st.guestEnabled && st.guests) parts.push(`👥 Guests: ${st.guests.trim()}`);
+      if (st.lunch && st.lunch.trim()) parts.push(`Lunch: ${st.lunch.trim()}`);
+      parts.push(`Main: ${mainTxt}`);
+      if (st.veggies && st.veggies.trim()) parts.push(`Veggies: ${st.veggies.trim()}`);
+      if (st.bEnabled && st.bAlt && st.bAlt.trim()) parts.push(`B Alt: ${st.bAlt.trim()}`);
+      if (st.xEnabled && st.xAlt && st.xAlt.trim()) parts.push(`X Alt: ${st.xAlt.trim()}`);
+
+      const idx = days.findIndex(d => d.id === dayObj.id);
+      const nextDay = days[(idx + 1) % days.length];
+      const nextSt = mealState[nextDay.id] || {};
+      if (nextSt.prepTag === 'freezer') {
+        parts.push(`🧊 Heads up: Pull ${nextDay.short}'s Freezer Meal to the fridge tonight!`);
+      } else if (nextSt.prepTag === 'slowcooker') {
+        parts.push(`🍲 Tomorrow (${nextDay.short}) is a Slow Cooker day!`);
+      } else if (nextSt.prepTag === 'makeahead') {
+        parts.push(`🥣 Tomorrow (${nextDay.short}) has Make-Ahead prep!`);
+      }
+
+      return {
+        title: `🍽️ ${dayObj.name} Dinner [${tagMeta.short}]`,
+        body: parts.join(' • ')
+      };
+    }
+
+    async function triggerAppNotification(title, body) {
+      if (!('Notification' in window)) {
+        showToast(`${title} — ${body}`);
+        showNotifFeedback('Displayed in-app alert banner (browser notifications not supported in this preview frame).');
+        return;
+      }
+
+      if (Notification.permission !== 'granted') {
+        try {
+          const perm = await Notification.requestPermission();
+          renderNotificationsDrawer();
+          if (perm !== 'granted') {
+            showToast(`${title} — ${body}`);
+            showNotifFeedback('Permission not granted yet; showed in-app banner instead.');
+            return;
+          }
+        } catch (e) {
+          showToast(`${title} — ${body}`);
+          return;
+        }
+      }
+
+      try {
+        if ('serviceWorker' in navigator) {
+          const reg = await navigator.serviceWorker.getRegistration();
+          if (reg && reg.showNotification) {
+            await reg.showNotification(title, {
+              body: body,
+              icon: './icon-192.png',
+              badge: './icon-192.png',
+              tag: 'family-meal-planner-alert',
+              renotify: true
+            });
+            showNotifFeedback('✓ Sent notification to your Android notification shade!');
+            return;
+          }
+        }
+        new Notification(title, { body: body });
+        showNotifFeedback('✓ Sent notification!');
+      } catch (e) {
+        showToast(`${title} — ${body}`);
+        showNotifFeedback('✓ Showed alert banner!');
+      }
+    }
+
+    function downloadPrepCalendarReminder(dayObj, st) {
+      const now = new Date();
+      const currentJsDay = now.getDay();
+      let daysAhead = (dayObj.jsDay - currentJsDay + 7) % 7;
+      const targetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + daysAhead);
+
+      let alarmHour = 16;
+      let alarmMin = 30;
+      let summaryText = `Dinner: ${st.main || dayObj.name}`;
+
+      if (st.prepTag === 'slowcooker') {
+        alarmHour = 8;
+        alarmMin = 30;
+        summaryText = `🍲 Start Slow Cooker: ${st.main || dayObj.name}`;
+      } else if (st.prepTag === 'freezer') {
+        targetDate.setDate(targetDate.getDate() - 1);
+        alarmHour = 20;
+        alarmMin = 0;
+        summaryText = `🧊 Thaw Freezer Meal for ${dayObj.name}: ${st.main || 'Dinner'}`;
+      } else if (st.prepTag === 'makeahead') {
+        alarmHour = 10;
+        alarmMin = 0;
+        summaryText = `🥣 Make-Ahead Prep for ${dayObj.name}: ${st.main || 'Dinner'}`;
+      }
+
+      targetDate.setHours(alarmHour, alarmMin, 0, 0);
+      const endDate = new Date(targetDate.getTime() + 30 * 60000);
+
+      const pad = n => String(n).padStart(2, '0');
+      const fmtIcsDate = d =>
+        `${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}T${pad(d.getHours())}${pad(d.getMinutes())}00`;
+
+      const descParts = [`Main (Mama, Pops, Arrw): ${st.main || 'TBD'}`];
+      if (st.veggies) descParts.push(`Extra Veggies: ${st.veggies}`);
+      if (st.bEnabled && st.bAlt) descParts.push(`B Alt: ${st.bAlt}`);
+      if (st.xEnabled && st.xAlt) descParts.push(`X Alt: ${st.xAlt}`);
+
+      const icsLines = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Family Meal Planner//EN',
+        'BEGIN:VEVENT',
+        `UID:meal-planner-${dayObj.id}-${Date.now()}`,
+        `DTSTAMP:${fmtIcsDate(now)}`,
+        `DTSTART:${fmtIcsDate(targetDate)}`,
+        `DTEND:${fmtIcsDate(endDate)}`,
+        `SUMMARY:${summaryText.replace(/[\r\n]/g, ' ')}`,
+        `DESCRIPTION:${descParts.join(' | ').replace(/[\r\n]/g, ' ')}`,
+        'BEGIN:VALARM',
+        'TRIGGER:-PT0M',
+        'ACTION:DISPLAY',
+        'DESCRIPTION:Family Meal Planner Reminder',
+        'END:VALARM',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ];
+
+      const blob = new Blob([icsLines.join('\r\n')], { type: 'text/calendar;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `meal-reminder-${dayObj.id}.ics`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast(`Downloaded phone calendar alert for ${dayObj.name} (${pad(alarmHour)}:${pad(alarmMin)})!`);
+    }
+
+    function renderNotificationsDrawer() {
+      const badge = document.getElementById('notif-permission-badge');
+      const dot = document.getElementById('notif-status-dot');
+      const autoCheck = document.getElementById('auto-daily-notif-check');
+      const timeInput = document.getElementById('notif-target-time');
+
+      if (autoCheck) autoCheck.checked = !!notifSettings.autoDaily;
+      if (timeInput && notifSettings.targetTime) timeInput.value = notifSettings.targetTime;
+
+      let permState = 'unsupported';
+      if ('Notification' in window) {
+        permState = Notification.permission;
+      }
+
+      if (badge && dot) {
+        if (permState === 'granted') {
+          badge.textContent = 'Enabled ✓';
+          badge.className = 'text-[11px] font-semibold px-2 py-0.5 rounded-full bg-teal-100 text-teal-950';
+          dot.className = 'w-2 h-2 rounded-full bg-teal-400';
+        } else if (permState === 'denied') {
+          badge.textContent = 'Blocked in Browser';
+          badge.className = 'text-[11px] font-semibold px-2 py-0.5 rounded-full bg-burgundy-soft text-burgundy-deep';
+          dot.className = 'w-2 h-2 rounded-full bg-amber-400';
+        } else {
+          badge.textContent = 'Ready to Enable';
+          badge.className = 'text-[11px] font-semibold px-2 py-0.5 rounded-full bg-app-subcard text-slate-800';
+          dot.className = 'w-2 h-2 rounded-full bg-amber-400';
+        }
+      }
+
+      const listEl = document.getElementById('prep-reminders-list');
+      if (!listEl) return;
+      listEl.innerHTML = '';
+
+      const prepDays = [];
+      days.forEach((d, idx) => {
+        const st = mealState[d.id];
+        if (!st) return;
+        if (st.prepTag === 'slowcooker' || st.prepTag === 'freezer' || st.prepTag === 'makeahead') {
+          const prevDay = days[(idx - 1 + 7) % 7];
+          let timingHint = '';
+          if (st.prepTag === 'slowcooker') timingHint = `${d.short} 8:30 AM: Start Slow Cooker`;
+          if (st.prepTag === 'freezer') timingHint = `${prevDay.short} 8:00 PM: Move from Freezer to Fridge`;
+          if (st.prepTag === 'makeahead') timingHint = `${d.short} 10:00 AM: Make-Ahead Prep`;
+          prepDays.push({ dayObj: d, st: st, timingHint: timingHint, meta: getPrepTagMeta(st.prepTag) });
+        }
+      });
+
+      if (prepDays.length === 0) {
+        listEl.innerHTML = `<p class="text-xs text-slate-600 italic py-2">No Slow Cooker, Freezer, or Make-Ahead days tagged in ${getActiveWeekLabel()} yet. Tag any day card below to see automatic prep alerts here!</p>`;
+        return;
+      }
+
+      prepDays.forEach(item => {
+        const row = document.createElement('div');
+        row.className = 'bg-app-surface rounded-lg border border-app-muted p-2 flex flex-wrap sm:flex-nowrap items-center justify-between gap-2 text-xs';
+        row.innerHTML = `
+          <div class="min-w-0 flex-1">
+            <div class="font-bold text-slate-900 flex items-center gap-1.5">
+              <span class="px-1.5 py-0.5 rounded text-[10px] border ${item.meta.badgeClass}">${item.meta.short}</span>
+              <span>${item.timingHint}</span>
+            </div>
+            <div class="text-[11px] text-slate-700 truncate mt-0.5">${item.st.main || '(No dinner title yet)'}</div>
+          </div>
+          <div class="flex items-center gap-1.5 shrink-0">
+            <button type="button" data-ping-prep="${item.dayObj.id}" class="px-2 py-1 bg-teal-800 hover:bg-teal-900 text-white text-[11px] font-semibold rounded transition" title="Send immediate notification">
+              🔔 Ping
+            </button>
+            <button type="button" data-ics-prep="${item.dayObj.id}" class="px-2 py-1 bg-slate-800 hover:bg-slate-900 text-white text-[11px] font-semibold rounded transition" title="Add exact-time alarm to phone calendar">
+              + Phone Alert
+            </button>
+          </div>
+        `;
+        listEl.appendChild(row);
+      });
+
+      listEl.querySelectorAll('[data-ping-prep]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const dId = btn.getAttribute('data-ping-prep');
+          const payload = buildDayNotificationPayload(dId);
+          triggerAppNotification(payload.title, payload.body);
+        });
+      });
+
+      listEl.querySelectorAll('[data-ics-prep]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const dId = btn.getAttribute('data-ics-prep');
+          const dObj = days.find(x => x.id === dId);
+          if (dObj && mealState[dId]) {
+            downloadPrepCalendarReminder(dObj, mealState[dId]);
+          }
+        });
+      });
+    }
+
+    function checkScheduledDailyNotification() {
+      if (!notifSettings.autoDaily) return;
+      if (!('Notification' in window) || Notification.permission !== 'granted') return;
+      const now = new Date();
+      const todayKey = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+      if (notifSettings.lastNotifiedDate === todayKey) return;
+
+      const [targetH, targetM] = (notifSettings.targetTime || '16:00').split(':').map(Number);
+      const nowMinutes = now.getHours() * 60 + now.getMinutes();
+      const targetMinutes = (targetH || 16) * 60 + (targetM || 0);
+
+      if (nowMinutes >= targetMinutes) {
+        notifSettings.lastNotifiedDate = todayKey;
+        saveToStorage();
+        const { todayObj } = getTodayAndTomorrowIds();
+        const payload = buildDayNotificationPayload(todayObj.id);
+        triggerAppNotification(payload.title, payload.body);
+      }
+    }
+
+    // Drawer Toggles (Notifications, Notes, Templates, Grocery, Preferences)
+    const notifDrawerEl = document.getElementById('notifications-drawer');
     const notesDrawerEl = document.getElementById('notes-drawer');
     const templatesDrawerEl = document.getElementById('templates-drawer');
     const drawerEl = document.getElementById('preferences-drawer');
     const groceryDrawerEl = document.getElementById('grocery-drawer');
 
+    function closeAllDrawersExcept(keepEl) {
+      [notifDrawerEl, notesDrawerEl, templatesDrawerEl, drawerEl, groceryDrawerEl].forEach(el => {
+        if (el && el !== keepEl) el.classList.add('hidden');
+      });
+    }
+
+    document.getElementById('toggle-notifications-btn').addEventListener('click', () => {
+      notifDrawerEl.classList.toggle('hidden');
+      if (!notifDrawerEl.classList.contains('hidden')) {
+        closeAllDrawersExcept(notifDrawerEl);
+        renderNotificationsDrawer();
+      }
+    });
+
+    document.getElementById('enable-notif-btn').addEventListener('click', async () => {
+      if (!('Notification' in window)) {
+        showNotifFeedback('Browser notifications are not supported in this preview frame, but work when installed on your Razr!');
+        return;
+      }
+      try {
+        const perm = await Notification.requestPermission();
+        renderNotificationsDrawer();
+        if (perm === 'granted') {
+          const { todayObj } = getTodayAndTomorrowIds();
+          const payload = buildDayNotificationPayload(todayObj.id);
+          triggerAppNotification('🔔 Family Meal Planner Alerts Enabled!', payload.body);
+        } else {
+          showNotifFeedback('Notification permission was not granted. Check Chrome site settings on your phone.');
+        }
+      } catch (e) {
+        showNotifFeedback('Could not request permission in this frame; try directly in your installed Razr app!');
+      }
+    });
+
+    document.getElementById('send-test-notif-btn').addEventListener('click', () => {
+      const { todayObj } = getTodayAndTomorrowIds();
+      const payload = buildDayNotificationPayload(todayObj.id);
+      triggerAppNotification(payload.title, payload.body);
+    });
+
+    document.getElementById('auto-daily-notif-check').addEventListener('change', (e) => {
+      notifSettings.autoDaily = e.target.checked;
+      saveToStorage();
+      if (e.target.checked) {
+        showNotifFeedback(`✓ Daily dinner & prep alert active for ${notifSettings.targetTime || '16:00'}!`);
+      }
+    });
+
+    document.getElementById('notif-target-time').addEventListener('change', (e) => {
+      notifSettings.targetTime = e.target.value || '16:00';
+      notifSettings.lastNotifiedDate = '';
+      saveToStorage();
+      showNotifFeedback(`✓ Updated daily alert target time to ${notifSettings.targetTime}!`);
+    });
+
     document.getElementById('toggle-notes-btn').addEventListener('click', () => {
       notesDrawerEl.classList.toggle('hidden');
       if (!notesDrawerEl.classList.contains('hidden')) {
-        templatesDrawerEl.classList.add('hidden');
-        drawerEl.classList.add('hidden');
-        groceryDrawerEl.classList.add('hidden');
+        closeAllDrawersExcept(notesDrawerEl);
         document.getElementById('brain-dump-textarea').focus();
       }
     });
@@ -2230,9 +2793,7 @@
     document.getElementById('toggle-templates-btn').addEventListener('click', () => {
       templatesDrawerEl.classList.toggle('hidden');
       if (!templatesDrawerEl.classList.contains('hidden')) {
-        notesDrawerEl.classList.add('hidden');
-        drawerEl.classList.add('hidden');
-        groceryDrawerEl.classList.add('hidden');
+        closeAllDrawersExcept(templatesDrawerEl);
         renderTemplatesDrawer();
       }
     });
@@ -2240,18 +2801,14 @@
     document.getElementById('toggle-drawer-btn').addEventListener('click', () => {
       drawerEl.classList.toggle('hidden');
       if (!drawerEl.classList.contains('hidden')) {
-        notesDrawerEl.classList.add('hidden');
-        groceryDrawerEl.classList.add('hidden');
-        templatesDrawerEl.classList.add('hidden');
+        closeAllDrawersExcept(drawerEl);
       }
     });
 
     document.getElementById('toggle-grocery-btn').addEventListener('click', () => {
       groceryDrawerEl.classList.toggle('hidden');
       if (!groceryDrawerEl.classList.contains('hidden')) {
-        notesDrawerEl.classList.add('hidden');
-        drawerEl.classList.add('hidden');
-        templatesDrawerEl.classList.add('hidden');
+        closeAllDrawersExcept(groceryDrawerEl);
         renderGroceryAndShareDrawer();
       }
     });
@@ -2661,7 +3218,7 @@
 
     if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.port !== '')) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js').catch(() => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {
           // Ignore registration error inside sandboxed preview iframe
         });
       });
@@ -2673,6 +3230,7 @@
     updateWeekPrepSummary();
     updateNotesIndicator();
     updateUndoButtonUI();
+    renderNotificationsDrawer();
     renderTemplatesDrawer();
     renderPreferencesDrawer();
     renderGroceryAndShareDrawer();
@@ -2681,6 +3239,8 @@
     updateViewModeButtons();
     renderDayPills();
     renderDays();
+    checkScheduledDailyNotification();
+    setInterval(checkScheduledDailyNotification, 60000);
   </script>
 </body>
 </html>
